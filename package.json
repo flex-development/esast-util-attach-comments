@@ -98,6 +98,7 @@
     "@types/is-ci": "3.0.4",
     "@types/node": "20.11.24",
     "@types/node-notifier": "8.0.5",
+    "@types/unist": "3.0.2",
     "@typescript-eslint/eslint-plugin": "7.1.0",
     "@typescript-eslint/parser": "7.1.0",
     "@vates/toggle-scripts": "1.0.0",
@@ -147,15 +148,20 @@
     "yaml-eslint-parser": "1.2.2"
   },
   "peerDependencies": {
-    "@types/estree": ">=1.0.5"
+    "@types/estree": ">=1.0.5",
+    "@types/unist": ">=3.0.2"
   },
   "peerDependenciesMeta": {
     "@types/estree": {
+      "optional": true
+    },
+    "@types/unist": {
       "optional": true
     }
   },
   "resolutions": {
     "@types/estree": "1.0.5",
+    "@types/unist": "3.0.2",
     "chai": "5.1.0"
   },
   "packageManager": "yarn@4.1.0",
