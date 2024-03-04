@@ -2,7 +2,7 @@
 
 [![github release](https://img.shields.io/github/v/release/flex-development/esast-util-attach-comments.svg?include_prereleases&sort=semver)](https://github.com/flex-development/esast-util-attach-comments/releases/latest)
 [![npm](https://img.shields.io/npm/v/@flex-development/esast-util-attach-comments.svg)](https://npmjs.com/package/@flex-development/esast-util-attach-comments)
-[![codecov](https://codecov.io/gh/flex-development/esast-util-attach-comments/graph/badge.svg?token=)](https://codecov.io/gh/flex-development/esast-util-attach-comments)
+[![codecov](https://codecov.io/gh/flex-development/esast-util-attach-comments/graph/badge.svg?token=gATnvcdplV)](https://codecov.io/gh/flex-development/esast-util-attach-comments)
 [![module type: esm](https://img.shields.io/badge/module%20type-esm-brightgreen)](https://github.com/voxpelli/badges-cjs-esm)
 [![license](https://img.shields.io/github/license/flex-development/esast-util-attach-comments.svg)](LICENSE.md)
 [![conventional commits](https://img.shields.io/badge/-conventional%20commits-fe5196?logo=conventional-commits&logoColor=ffffff)](https://conventionalcommits.org/)

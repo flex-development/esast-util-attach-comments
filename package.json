@@ -158,9 +158,6 @@
     "@types/estree": "1.0.5",
     "chai": "5.1.0"
   },
-  "engines": {
-    "node": ">=18.18.2"
-  },
   "packageManager": "yarn@4.1.0",
   "sideEffects": false
 }

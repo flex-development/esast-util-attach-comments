@@ -88,9 +88,4 @@ ignore:
   - '**/index.ts'
 
 profiling:
-  critical_files_paths:
-    - src/handlers/*.ts
-    - src/utils/get-identifiers.ts
-    - src/utils/has-module-id.ts
-    - src/utils/preleave-if-statement.ts
-    - src/visitors/*.ts
+  critical_files_paths: []
