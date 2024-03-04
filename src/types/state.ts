@@ -22,6 +22,11 @@ type State = {
    * Index of current comment.
    */
   index: number
+
+  /**
+   * Visiting nodes on exit?
+   */
+  leave?: boolean
 }
 
 export type { State as default }

@@ -5,3 +5,4 @@
 
 export { default as compare } from './compare'
 export { default as keycheck } from './keycheck'
+export { default as slice } from './slice'

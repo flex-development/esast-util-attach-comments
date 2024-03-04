@@ -8,7 +8,15 @@ import testSubject from '../compare'
 
 describe('unit:utils/compare', () => {
   it('should return Number.NaN if comparison cannot be made', () => {
-    expect(testSubject({}, {}, true)).to.be.NaN
+    // Arrange
+    const cases: Parameters<typeof testSubject>[] = [
+      [],
+      [{}, null],
+      [null, {}, true]
+    ]
+
+    // Act + Expect
+    cases.forEach(params => expect(testSubject(...params)).to.be.NaN)
   })
 
   describe('position', () => {
