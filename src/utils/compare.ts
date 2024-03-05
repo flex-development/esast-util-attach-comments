@@ -4,7 +4,7 @@
  */
 
 import type { Nilable } from '@flex-development/tutils'
-import type { Comment, Node } from 'estree'
+import type { BaseNodeWithoutComments } from 'estree'
 
 declare module 'estree' {
   interface BaseNodeWithoutComments {
@@ -20,24 +20,30 @@ declare module 'estree' {
 type Field = 'end' | 'start'
 
 /**
+ * Object containing positional info.
+ *
+ * @internal
+ */
+type PositionalInfo = Pick<BaseNodeWithoutComments, 'loc' | 'position'>
+
+/**
  * Compare `node` against the start position of `comment`.
  *
- * @see {@linkcode Comment}
- * @see {@linkcode Node}
+ * @see {@linkcode PositionalInfo}
  *
  * @internal
  *
  * @this {void}
  *
- * @param {Nilable<Pick<Comment, 'position'>>?} [comment] - Comment node
- * @param {Nilable<Pick<Comment | Node, 'position'>>?} [node] - Node to check
+ * @param {Nilable<PositionalInfo>?} [comment] - Comment node
+ * @param {Nilable<PositionalInfo>?} [node] - Node to check
  * @param {boolean?} [end] - Use `end` position of `node` in comparsion?
  * @return {number} Comparison result
  */
 function compare(
   this: void,
-  comment?: Nilable<Pick<Comment, 'position'>>,
-  node?: Nilable<Pick<Comment | Node, 'position'>>,
+  comment?: Nilable<PositionalInfo>,
+  node?: Nilable<PositionalInfo>,
   end?: boolean
 ): number {
   /**
@@ -52,6 +58,14 @@ function compare(
     return (
       comment.position.start.line - node.position[field].line ||
       comment.position.start.column - node.position[field].column
+    )
+  }
+
+  // compare source location
+  if (comment?.loc?.start && node?.loc?.[field]) {
+    return (
+      comment.loc.start.line - node.loc[field].line ||
+      comment.loc.start.column - node.loc[field].column
     )
   }
 
