@@ -7,6 +7,13 @@ import type { State } from '#src/types'
 import type { Comment, Node } from 'estree'
 import compare from './compare'
 
+declare module 'estree' {
+  interface Comment {
+    leading?: boolean | undefined
+    trailing?: boolean | undefined
+  }
+}
+
 /**
  * Get a comments slice.
  *
@@ -34,7 +41,21 @@ function slice(this: void, state: State, node: Node): Comment[] {
   while (
     state.comments[state.index] &&
     compare(state.comments[state.index], node, state.leave) < 1
-  ) result.push(state.comments[state.index++]!)
+  ) {
+    /**
+     * Comment node.
+     *
+     * @const {Comment} comment
+     */
+    const comment: Comment = state.comments[state.index++]!
+
+    // set fields
+    comment.leading = state.leave !== true
+    comment.trailing = state.leave === true
+
+    // add comment to slice
+    result.push(comment)
+  }
 
   return result
 }

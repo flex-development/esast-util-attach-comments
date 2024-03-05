@@ -7,7 +7,7 @@ import PURE_COMMENTS from '#fixtures/pure-comments'
 import type { State } from '#src/types'
 import * as utils from '#src/utils'
 import type { Spy } from '#tests/interfaces'
-import type { NewExpression, Program } from 'estree'
+import type { Comment, NewExpression, Program } from 'estree'
 import testSubject from '../visitor'
 
 describe('functional:visitor', () => {
@@ -69,14 +69,15 @@ describe('functional:visitor', () => {
         testSubject(state)(node, 'value')
       })
 
-      it('should attach leading comments', () => {
+      it('should collect leading comments', () => {
         // Arrange
-        const property: string = 'leadingComments'
+        const check = (node: Comment): boolean => !!node.leading
 
         // Expect
         expect(slice).toHaveBeenCalledOnce()
         expect(slice).toHaveBeenCalledWith(state, node)
-        expect(node).to.have.deep.property(property, [state.comments[1]])
+        expect(node).to.have.deep.property('comments', [state.comments[1]])
+        expect(node).to.have.property('comments').each.satisfy(check)
       })
     })
   })
@@ -107,11 +108,20 @@ describe('functional:visitor', () => {
           comments: [
             {
               position: {
-                end: { column: 38, line: 2, offset: 38 },
-                start: { column: 1, line: 2, offset: 1 }
+                end: { column: 4, line: 4, offset: 79 },
+                start: { column: 1, line: 1, offset: 0 }
+              },
+              type: 'Block',
+              value:
+                '*\n * @file Fixtures - gemojiShortcode\n * @module fixtures/gemojiShortcode\n '
+            },
+            {
+              position: {
+                end: { column: 47, line: 134, offset: 3323 },
+                start: { column: 1, line: 134, offset: 3277 }
               },
               type: 'Line',
-              value: '# sourceMappingURL=polyfill.mjs.map'
+              value: '# sourceMappingURL=gemoji-shortcode.mjs.map'
             }
           ],
           index: 0
@@ -120,7 +130,7 @@ describe('functional:visitor', () => {
         node = {
           body: [],
           position: {
-            end: { column: 1, line: 3, offset: 39 },
+            end: { column: 1, line: 135, offset: 3324 },
             start: { column: 1, line: 1, offset: 0 }
           },
           sourceType: 'module',
@@ -133,10 +143,15 @@ describe('functional:visitor', () => {
         testSubject(state, leave)(node, undefined)
       })
 
-      it('should attach comments', () => {
+      it('should attach all comments', () => {
+        // Arrange
+        const { comments } = state
+
+        // Expect
         expect(slice).toHaveBeenCalledWith(state, node)
-        expect(node).to.have.deep.property('comments', state.comments)
-        expect(node).to.have.deep.property('trailingComments', state.comments)
+        expect(node).to.have.deep.property('comments', comments)
+        expect(node).to.have.deep.property('leadingComments', [comments[0]])
+        expect(node).to.have.deep.property('trailingComments', [comments[1]])
       })
     })
   })

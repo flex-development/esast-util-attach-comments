@@ -49,14 +49,26 @@ Program
   │                   property: Identifier<colon>
   │                   computed: false
   │                   optional: false
-  │     leadingComments:
-  │     ├─0 Block "*\\n * Construct a union of \`T\` and \`undefined\`.\\n *\\n * @template T\\n * @typedef {import('@flex-development/tutils').Optional<T>} Optional\\n "
-  │     ├─1 Block "*\\n * @typedef {import('micromark-util-types').Code} Code\\n * @typedef {import('micromark-util-types').Construct} Construct\\n * @typedef {import('micromark-util-types').Effects} Effects\\n * @typedef {import('micromark-util-types').State} State\\n * @typedef {import('micromark-util-types').TokenizeContext} TokenizeContext\\n "
-  │     └─2 Block "*\\n * Guard whether \`code\` can come before a gemoji.\\n *\\n * @see {@linkcode Code}\\n *\\n * @this {TokenizeContext}\\n *\\n * @param {Code} code - Previous character code\\n * @return {boolean} \`true\` if \`code\` allowed before construct\\n "
   │     comments:
   │     ├─0 Block "*\\n * Construct a union of \`T\` and \`undefined\`.\\n *\\n * @template T\\n * @typedef {import('@flex-development/tutils').Optional<T>} Optional\\n "
+  │     │     leading: true
+  │     │     trailing: false
   │     ├─1 Block "*\\n * @typedef {import('micromark-util-types').Code} Code\\n * @typedef {import('micromark-util-types').Construct} Construct\\n * @typedef {import('micromark-util-types').Effects} Effects\\n * @typedef {import('micromark-util-types').State} State\\n * @typedef {import('micromark-util-types').TokenizeContext} TokenizeContext\\n "
+  │     │     leading: true
+  │     │     trailing: false
   │     └─2 Block "*\\n * Guard whether \`code\` can come before a gemoji.\\n *\\n * @see {@linkcode Code}\\n *\\n * @this {TokenizeContext}\\n *\\n * @param {Code} code - Previous character code\\n * @return {boolean} \`true\` if \`code\` allowed before construct\\n "
+  │           leading: true
+  │           trailing: false
+  │     leadingComments:
+  │     ├─0 Block "*\\n * Construct a union of \`T\` and \`undefined\`.\\n *\\n * @template T\\n * @typedef {import('@flex-development/tutils').Optional<T>} Optional\\n "
+  │     │     leading: true
+  │     │     trailing: false
+  │     ├─1 Block "*\\n * @typedef {import('micromark-util-types').Code} Code\\n * @typedef {import('micromark-util-types').Construct} Construct\\n * @typedef {import('micromark-util-types').Effects} Effects\\n * @typedef {import('micromark-util-types').State} State\\n * @typedef {import('micromark-util-types').TokenizeContext} TokenizeContext\\n "
+  │     │     leading: true
+  │     │     trailing: false
+  │     └─2 Block "*\\n * Guard whether \`code\` can come before a gemoji.\\n *\\n * @see {@linkcode Code}\\n *\\n * @this {TokenizeContext}\\n *\\n * @param {Code} code - Previous character code\\n * @return {boolean} \`true\` if \`code\` allowed before construct\\n "
+  │           leading: true
+  │           trailing: false
   └─4 ExportDefaultDeclaration
         declaration: ObjectExpression
           properties:
@@ -66,40 +78,64 @@ Program
           │     computed: false
           │     key: Identifier<name>
           │     kind: "init"
-          │     leadingComments:
-          │     └─0 Block "*\\n   * Construct name.\\n   "
           │     comments:
           │     └─0 Block "*\\n   * Construct name.\\n   "
+          │           leading: true
+          │           trailing: false
+          │     leadingComments:
+          │     └─0 Block "*\\n   * Construct name.\\n   "
+          │           leading: true
+          │           trailing: false
           ├─1 Property
           │     method: false
           │     shorthand: true
           │     computed: false
           │     key: Identifier<previous>
           │     kind: "init"
-          │     leadingComments:
-          │     └─0 Block "*\\n   * Guard whether \`code\` can come before this construct.\\n   *\\n   * @see {@linkcode Code}\\n   *\\n   * @this {TokenizeContext}\\n   *\\n   * @param {Code} code - Previous character code\\n   * @return {boolean} \`true\` if \`code\` allowed before construct\\n   "
           │     comments:
           │     └─0 Block "*\\n   * Guard whether \`code\` can come before this construct.\\n   *\\n   * @see {@linkcode Code}\\n   *\\n   * @this {TokenizeContext}\\n   *\\n   * @param {Code} code - Previous character code\\n   * @return {boolean} \`true\` if \`code\` allowed before construct\\n   "
+          │           leading: true
+          │           trailing: false
+          │     leadingComments:
+          │     └─0 Block "*\\n   * Guard whether \`code\` can come before this construct.\\n   *\\n   * @see {@linkcode Code}\\n   *\\n   * @this {TokenizeContext}\\n   *\\n   * @param {Code} code - Previous character code\\n   * @return {boolean} \`true\` if \`code\` allowed before construct\\n   "
+          │           leading: true
+          │           trailing: false
           └─2 Property
                 method: true
                 shorthand: false
                 computed: false
                 key: Identifier<tokenize>
                 kind: "init"
-                leadingComments:
-                └─0 Block "*\\n   * Set up a state machine to process character codes.\\n   *\\n   * @see {@linkcode Code}\\n   * @see {@linkcode Effects}\\n   * @see {@linkcode State}\\n   *\\n   * @this {TokenizeContext}\\n   *\\n   * @param {Effects} effects - Context object to transition state machine\\n   * @param {State} ok - Success state function\\n   * @param {State} nok - Error state function\\n   * @return {State} Initial state\\n   "
                 comments:
                 └─0 Block "*\\n   * Set up a state machine to process character codes.\\n   *\\n   * @see {@linkcode Code}\\n   * @see {@linkcode Effects}\\n   * @see {@linkcode State}\\n   *\\n   * @this {TokenizeContext}\\n   *\\n   * @param {Effects} effects - Context object to transition state machine\\n   * @param {State} ok - Success state function\\n   * @param {State} nok - Error state function\\n   * @return {State} Initial state\\n   "
-        leadingComments:
-        └─0 Block "*\\n * Gemoji (\`:+1:\`) construct.\\n *\\n * @type {Construct}\\n "
+                      leading: true
+                      trailing: false
+                leadingComments:
+                └─0 Block "*\\n   * Set up a state machine to process character codes.\\n   *\\n   * @see {@linkcode Code}\\n   * @see {@linkcode Effects}\\n   * @see {@linkcode State}\\n   *\\n   * @this {TokenizeContext}\\n   *\\n   * @param {Effects} effects - Context object to transition state machine\\n   * @param {State} ok - Success state function\\n   * @param {State} nok - Error state function\\n   * @return {State} Initial state\\n   "
+                      leading: true
+                      trailing: false
         comments:
         └─0 Block "*\\n * Gemoji (\`:+1:\`) construct.\\n *\\n * @type {Construct}\\n "
+              leading: true
+              trailing: false
+        leadingComments:
+        └─0 Block "*\\n * Gemoji (\`:+1:\`) construct.\\n *\\n * @type {Construct}\\n "
+              leading: true
+              trailing: false
   sourceType: "module"
   comments:
   ├─0 Block "*\\n * @file Fixtures - gemojiShortcode\\n * @module fixtures/gemojiShortcode\\n "
+  │     leading: true
+  │     trailing: false
   └─1 Line " # sourceMappingURL=gemoji-shortcode.mjs.map"
+        leading: false
+        trailing: true
   leadingComments:
   └─0 Block "*\\n * @file Fixtures - gemojiShortcode\\n * @module fixtures/gemojiShortcode\\n "
+        leading: true
+        trailing: false
   trailingComments:
   └─0 Line " # sourceMappingURL=gemoji-shortcode.mjs.map"
+        leading: false
+        trailing: true
 `;

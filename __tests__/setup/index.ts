@@ -3,4 +3,4 @@
  * @module tests/setup
  */
 
-export {}
+import './chai'

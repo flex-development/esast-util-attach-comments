@@ -39,11 +39,9 @@ function visitor(state: State, leave?: boolean): Visitor {
 
     if (keycheck(key)) {
       if ((state.leave = !!leave)) {
-        node.comments = []
-        node.trailingComments = []
-        node.trailingComments.push(...slice(state, node))
-        node.comments.push(...node.leadingComments!)
-        node.comments.push(...node.trailingComments)
+        node.comments!.push(...slice(state, node))
+        node.leadingComments = node.comments!.filter(n => n.leading)
+        node.trailingComments = node.comments!.filter(n => n.trailing)
 
         for (const [key, value] of Object.entries(node)) {
           switch (key) {
@@ -57,8 +55,8 @@ function visitor(state: State, leave?: boolean): Visitor {
           }
         }
       } else {
-        node.leadingComments = []
-        node.leadingComments.push(...slice(state, node))
+        node.comments = []
+        node.comments.push(...slice(state, node))
       }
     }
 

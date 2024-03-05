@@ -1462,6 +1462,7 @@ __metadata:
     "@vates/toggle-scripts": "npm:1.0.0"
     "@vitest/coverage-v8": "npm:1.3.1"
     chai: "npm:5.1.0"
+    chai-each: "npm:0.0.1"
     cross-env: "npm:7.0.3"
     cspell: "npm:8.5.0"
     devlop: "npm:1.1.0"
@@ -3235,6 +3236,13 @@ __metadata:
   version: 2.0.1
   resolution: "ccount@npm:2.0.1"
   checksum: 10/48193dada54c9e260e0acf57fc16171a225305548f9ad20d5471e0f7a8c026aedd8747091dccb0d900cde7df4e4ddbd235df0d8de4a64c71b12f0d3303eeafd4
+  languageName: node
+  linkType: hard
+
+"chai-each@npm:0.0.1":
+  version: 0.0.1
+  resolution: "chai-each@npm:0.0.1"
+  checksum: 10/bc4dc57fd60687a2dbe212e4a9cfc6e4598931749f66a48d3aa800dd821ec3f7e31bd53937fb16ff6f5936be94e11e50f3baee4b243a838ceeb46e6b7bfa72e3
   languageName: node
   linkType: hard
 
