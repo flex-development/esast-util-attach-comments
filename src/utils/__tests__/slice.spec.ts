@@ -3,6 +3,7 @@
  * @module esast-util-attach-comments/utils/tests/unit/slice
  */
 
+import comments from '#fixtures/pure-comments'
 import type { State } from '#src/types'
 import type { NewExpression } from 'estree'
 import testSubject from '../slice'
@@ -13,24 +14,7 @@ describe('unit:utils/slice', () => {
 
   beforeAll(() => {
     state = {
-      comments: [
-        {
-          position: {
-            end: { column: 33, line: 11, offset: 411 },
-            start: { column: 18, line: 11, offset: 396 }
-          },
-          type: 'Block',
-          value: ' @__PURE__ '
-        },
-        {
-          position: {
-            end: { column: 27, line: 14, offset: 535 },
-            start: { column: 12, line: 14, offset: 520 }
-          },
-          type: 'Block',
-          value: ' @__PURE__ '
-        }
-      ],
+      comments: [...comments],
       index: 0
     }
 

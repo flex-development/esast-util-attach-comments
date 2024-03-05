@@ -20,9 +20,8 @@ const config: UserConfig = {
   rules: {
     'scope-enum': [Severity.Error, 'always', scopes([
       'chore',
-      'handlers',
       'util',
-      'visitors'
+      'visitor'
     ])]
   }
 }
