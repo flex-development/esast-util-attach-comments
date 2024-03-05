@@ -7,12 +7,14 @@ dedupe
 dedupe
 deno
 dessant
+devlop
 docast
 dohm
 dprint
 esast
 estree
 fbca
+gemoji
 ggshield
 gpgsign
 hmarr

@@ -90,4 +90,5 @@ ignore:
 profiling:
   critical_files_paths:
     - src/utils/compare.ts
+    - src/util.ts
     - src/visitor.ts

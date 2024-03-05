@@ -4,7 +4,7 @@
  */
 
 import type { Optional } from '@flex-development/tutils'
-import type { Node } from 'estree'
+import type { Comment, Node } from 'estree'
 import { CONTINUE, EXIT } from 'estree-util-visit'
 import type { State, Visitor } from './types'
 import { keycheck, slice } from './utils'
@@ -44,6 +44,18 @@ function visitor(state: State, leave?: boolean): Visitor {
         node.trailingComments.push(...slice(state, node))
         node.comments.push(...node.leadingComments!)
         node.comments.push(...node.trailingComments)
+
+        for (const [key, value] of Object.entries(node)) {
+          switch (key) {
+            case 'comments':
+            case 'leadingComments':
+            case 'trailingComments':
+              !(<Comment[]>value).length && delete node[key]
+              break
+            default:
+              break
+          }
+        }
       } else {
         node.leadingComments = []
         node.leadingComments.push(...slice(state, node))

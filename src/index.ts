@@ -3,4 +3,4 @@
  * @module esast-util-attach-comments
  */
 
-export {}
+export { default as attachComments } from './util'
