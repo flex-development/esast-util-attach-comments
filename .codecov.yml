@@ -86,9 +86,11 @@ ignore:
   - '**/interfaces/'
   - '**/types/'
   - '**/index.ts'
+  - '!src/index.ts'
 
 profiling:
   critical_files_paths:
     - src/utils/compare.ts
+    - src/utils/slice.ts
     - src/util.ts
     - src/visitor.ts

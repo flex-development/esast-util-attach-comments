@@ -61,7 +61,8 @@ const config: UserConfigExport = defineConfig((env: ConfigEnv): UserConfig => {
           '**/__tests__/**',
           '**/interfaces/',
           '**/types/',
-          '**/index.ts'
+          '**/index.ts',
+          '!src/index.ts'
         ],
         extension: ['.ts'],
         include: ['src'],
@@ -108,7 +109,6 @@ const config: UserConfigExport = defineConfig((env: ConfigEnv): UserConfig => {
         )
       },
       restoreMocks: true,
-      root: process.cwd(),
       sequence: {
         sequencer: class Sequencer extends BaseSequencer {
           /**
@@ -131,15 +131,12 @@ const config: UserConfigExport = defineConfig((env: ConfigEnv): UserConfig => {
         }
       },
       setupFiles: ['./__tests__/setup/index.ts'],
-      silent: false,
-      slowTestThreshold: 3000,
       snapshotFormat: {
         callToJSON: true,
         min: false,
         printBasicPrototype: false,
         printFunctionName: true
       },
-      testTimeout: 10 * 1000,
       typecheck: {
         allowJs: false,
         checker: 'tsc',

@@ -3,83 +3,77 @@
  * @module esast-util-attach-comments/utils/tests/unit/compare
  */
 
+import comments from '#fixtures/comments.json' assert { type: 'json' }
+import type { Shake } from '@flex-development/tutils'
+import type { PositionalInfo } from '@flex-development/unist-util-types'
 import type { Point, Position } from 'unist'
 import testSubject from '../compare'
 
 describe('unit:utils/compare', () => {
   it('should return Number.NaN if comparison cannot be made', () => {
-    // Arrange
-    const cases: Parameters<typeof testSubject>[] = [
-      [],
-      [{}, null],
-      [null, {}, true]
-    ]
-
-    // Act + Expect
-    cases.forEach(params => expect(testSubject(...params)).to.be.NaN)
+    expect(testSubject()).to.be.NaN
   })
 
-  describe.each<'loc' | 'position'>([
-    'loc',
-    'position'
-  ])('%s', field => {
-    let comment: Record<string, Position>
+  describe('position', () => {
+    let node: Required<Shake<PositionalInfo>>
 
     beforeAll(() => {
-      comment = {
-        [field]: {
-          end: { column: 33, line: 11, offset: 411 },
-          start: { column: 18, line: 11, offset: 396 }
-        }
+      node = comments[0]!
+    })
+
+    it('should return position.end.column comparison result', () => {
+      // Arrange
+      const position: Position = {
+        end: node.position.start,
+        start: { column: 1, line: node.position.start.line - 2 }
       }
-    })
-
-    it(`should return node.${field}.end.column comparison result`, () => {
-      // Arrange
-      const end: Point = { column: 16, line: 11, offset: 394 }
-      const start: Point = { column: 5, line: 11, offset: 383 }
 
       // Act
-      const result = testSubject(comment, { [field]: { end, start } }, true)
+      const result = testSubject(node, { position }, true)
 
       // Expect
-      expect(result).to.equal(comment[field]!.start.column - end.column)
+      expect(result).to.equal(node.position.start.column - position.end.column)
     })
 
-    it(`should return node.${field}.end.line comparison result`, () => {
+    it('should return position.end.line comparison result', () => {
       // Arrange
-      const end: Point = { column: 21, line: 5, offset: 216 }
-      const start: Point = { column: 13, line: 5, offset: 208 }
+      const { position } = comments[1]!
 
       // Act
-      const result = testSubject(comment, { [field]: { end, start } })
+      const result = testSubject(node, { position }, true)
 
       // Expect
-      expect(result).to.equal(comment[field]!.start.line - end.line)
+      expect(result).to.equal(node.position.start.line - position.end.line)
     })
 
-    it(`should return node.${field}.start.column comparison result`, () => {
+    it('should return position.start.column comparison result', () => {
       // Arrange
-      const end: Point = { column: 43, line: 11, offset: 421 }
-      const start: Point = { column: 34, line: 11, offset: 412 }
+      const start: Point = {
+        ...node.position.end,
+        column: node.position.end.column + 4
+      }
 
       // Act
-      const result = testSubject(comment, { [field]: { end, start } })
+      const result = testSubject(node, {
+        position: {
+          end: node.position.end,
+          start
+        }
+      })
 
       // Expect
-      expect(result).to.equal(comment[field]!.start.column - start.column)
+      expect(result).to.equal(node.position.end.column - start.column)
     })
 
-    it(`should return node.${field}.start.line comparison result`, () => {
+    it('should return position.start.line comparison result', () => {
       // Arrange
-      const end: Point = { column: 50, line: 3, offset: 144 }
-      const start: Point = { column: 1, line: 3, offset: 95 }
+      const { position } = comments[2]!
 
       // Act
-      const result = testSubject(comment, { [field]: { end, start } })
+      const result = testSubject(node, { position })
 
       // Expect
-      expect(result).to.equal(comment[field]!.start.line - start.line)
+      expect(result).to.equal(node.position.end.line - position.start.line)
     })
   })
 })

@@ -3,7 +3,8 @@
  * @module esast-util-attach-comments/types/State
  */
 
-import type { Comment } from 'estree'
+import type { Comment } from '@flex-development/esast'
+import type { Index } from '@flex-development/unist-util-visit'
 
 /**
  * Visitor state.
@@ -21,12 +22,7 @@ type State = {
   /**
    * Index of current comment.
    */
-  index: number
-
-  /**
-   * Visiting nodes on exit?
-   */
-  leave?: boolean
+  index: Index
 }
 
 export type { State as default }

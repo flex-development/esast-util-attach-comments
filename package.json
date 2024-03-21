@@ -1,16 +1,13 @@
 {
   "name": "@flex-development/esast-util-attach-comments",
-  "description": "esast (and estree) utility to attach comments",
-  "version": "0.0.0",
+  "description": "esast utility to attach comments",
+  "version": "0.0.1",
   "keywords": [
-    "acorn",
     "ast",
     "comment",
     "ecmascript",
     "esast",
     "esast-util",
-    "estree",
-    "estree-util",
     "javascript",
     "js",
     "unist"
@@ -38,6 +35,7 @@
     ".": "./dist/index.mjs",
     "./package.json": "./package.json"
   },
+  "types": "./dist/index.d.mts",
   "scripts": {
     "build": "mkbuild",
     "check:ci": "yarn dedupe --check && yarn check:format && yarn check:lint && yarn check:spelling && yarn typecheck && yarn test:cov && yarn pack && yarn check:types:build && attw package.tgz && yarn clean:pack",
@@ -77,7 +75,8 @@
   },
   "dependencies": {
     "@flex-development/tutils": "6.0.0-alpha.25",
-    "estree-util-visit": "2.0.0"
+    "@flex-development/unist-util-visit": "1.0.0",
+    "devlop": "1.1.0"
   },
   "devDependencies": {
     "@arethetypeswrong/cli": "0.15.0",
@@ -85,18 +84,22 @@
     "@commitlint/types": "19.0.3",
     "@flex-development/commitlint-config": "1.0.1",
     "@flex-development/decorator-regex": "2.0.0",
+    "@flex-development/docast": "1.0.0-alpha.14",
+    "@flex-development/docast-util-from-docs": "1.0.0-alpha.1",
+    "@flex-development/esast": "1.0.0-alpha.5",
     "@flex-development/esm-types": "2.0.0",
     "@flex-development/grease": "3.0.0-alpha.9",
     "@flex-development/mkbuild": "1.0.0-alpha.23",
     "@flex-development/mlly": "1.0.0-alpha.18",
     "@flex-development/pathe": "2.0.0",
+    "@flex-development/unist-util-types": "1.2.0",
     "@html-eslint/eslint-plugin": "0.23.1",
     "@html-eslint/parser": "0.23.0",
     "@types/chai": "4.3.12",
     "@types/eslint": "8.56.5",
-    "@types/estree": "1.0.5",
     "@types/is-ci": "3.0.4",
-    "@types/node": "20.11.24",
+    "@types/mdast": "4.0.3",
+    "@types/node": "20.11.30",
     "@types/node-notifier": "8.0.5",
     "@types/unist": "3.0.2",
     "@typescript-eslint/eslint-plugin": "7.1.0",
@@ -107,10 +110,8 @@
     "chai-each": "0.0.1",
     "cross-env": "7.0.3",
     "cspell": "8.5.0",
-    "devlop": "1.1.0",
     "dprint": "0.45.0",
     "editorconfig": "2.0.0",
-    "esast-util-from-js": "2.0.1",
     "esbuild": "0.20.1",
     "eslint": "8.57.0",
     "eslint-import-resolver-typescript": "3.6.1",
@@ -146,19 +147,27 @@
     "to-vfile": "8.0.0",
     "trash-cli": "5.0.0",
     "ts-dedent": "2.2.0",
-    "typescript": "5.3.3",
+    "typescript": "5.4.2",
     "unist-util-inspect": "8.0.0",
     "vfile": "6.0.1",
-    "vite-tsconfig-paths": "4.3.1",
+    "vite-tsconfig-paths": "4.3.2",
     "vitest": "1.3.1",
     "yaml-eslint-parser": "1.2.2"
   },
   "peerDependencies": {
-    "@types/estree": ">=1.0.5",
+    "@flex-development/docast": ">=1.0.0-alpha.14",
+    "@flex-development/esast": ">=1.0.0-alpha.5",
+    "@types/mdast": ">=4.0.3",
     "@types/unist": ">=3.0.2"
   },
   "peerDependenciesMeta": {
-    "@types/estree": {
+    "@flex-development/docast": {
+      "optional": true
+    },
+    "@flex-development/esast": {
+      "optional": true
+    },
+    "@types/mdast": {
       "optional": true
     },
     "@types/unist": {
@@ -166,10 +175,12 @@
     }
   },
   "resolutions": {
-    "@types/estree": "1.0.5",
     "@types/unist": "3.0.2",
     "chai": "5.1.0"
   },
-  "packageManager": "yarn@4.1.0",
+  "engines": {
+    "node": ">=18.18.2"
+  },
+  "packageManager": "yarn@4.1.1",
   "sideEffects": false
 }

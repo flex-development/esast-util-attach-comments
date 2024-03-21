@@ -82,10 +82,11 @@ export default {
      */
     function inside(code) {
       switch (true) {
-        case code === codes.colon:
+        /* end gemoji */ case code === codes.colon:
           effects.consume(code)
           effects.exit('gemoji')
           return ok
+        /* inside gemoji */
         case asciiAlphanumeric(code):
         case code === codes.dash:
         case code === codes.plusSign:
@@ -93,7 +94,7 @@ export default {
           effects.consume(code)
           return inside
         default:
-          return nok(code)
+          return nok(code) /* invalid gemoji */
       }
     }
 
@@ -105,9 +106,11 @@ export default {
      */
     function begin(code) {
       switch (code) {
+        // ignore lone and back to back colons
         case codes.eof:
         case codes.colon:
           return nok(code)
+        // entering possible gemoji
         default:
           effects.consume(code)
           return inside
@@ -131,4 +134,4 @@ export default {
     return start
   }
 }
-// # sourceMappingURL=gemoji-shortcode.mjs.map
+//# sourceMappingURL=gemoji-shortcode.mjs.map

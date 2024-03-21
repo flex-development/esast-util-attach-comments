@@ -40,6 +40,7 @@ branches:
           - context: test (19)
           - context: test (20)
           - context: typescript (5.3.3)
+          - context: typescript (5.4.2)
           - context: typescript (latest)
         strict: true
       restrictions: null
@@ -166,7 +167,7 @@ repository:
   automated_security_fixes: true
   default_branch: main
   delete_branch_on_merge: true
-  description: esast (and estree) utility to attach comments
+  description: esast utility to attach comments
   has_issues: true
   has_projects: true
   has_wiki: false
@@ -181,14 +182,11 @@ repository:
   squash_merge_commit_message: BLANK
   squash_merge_commit_title: PR_TITLE
   topics:
-    - acorn
     - ast
     - comment
     - ecmascript
     - esast
     - esast-util
-    - estree
-    - estree-util
     - javascript
     - js
     - unist

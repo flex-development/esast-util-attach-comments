@@ -4,30 +4,18 @@
  */
 
 import type { Nilable } from '@flex-development/tutils'
-import type { BaseNodeWithoutComments } from 'estree'
-
-declare module 'estree' {
-  interface BaseNodeWithoutComments {
-    position?: import('unist').Position | undefined
-  }
-}
+import type { PositionalInfo } from '@flex-development/unist-util-types'
 
 /**
- * Field to compare on.
+ * Position field to compare on.
  *
  * @internal
  */
 type Field = 'end' | 'start'
 
 /**
- * Object containing positional info.
- *
- * @internal
- */
-type PositionalInfo = Pick<BaseNodeWithoutComments, 'loc' | 'position'>
-
-/**
- * Compare `node` against the start position of `comment`.
+ * Compare the position of a `node` against the start or end position of another
+ * node. Returns {@linkcode Number.NaN} if a comparison cannot be made.
  *
  * @see {@linkcode PositionalInfo}
  *
@@ -35,37 +23,36 @@ type PositionalInfo = Pick<BaseNodeWithoutComments, 'loc' | 'position'>
  *
  * @this {void}
  *
- * @param {Nilable<PositionalInfo>?} [comment] - Comment node
- * @param {Nilable<PositionalInfo>?} [node] - Node to check
- * @param {boolean?} [end] - Use `end` position of `node` in comparsion?
- * @return {number} Comparison result
+ * @param {Nilable<PositionalInfo>?} [node] - Positional info of first node
+ * @param {Nilable<PositionalInfo>?} [other] - Positional info of second node
+ * @param {boolean?} [end] - Use `end` position of `other` node?
+ * @return {number} Comparison result or `Number.NaN`
  */
 function compare(
   this: void,
-  comment?: Nilable<PositionalInfo>,
   node?: Nilable<PositionalInfo>,
+  other?: Nilable<PositionalInfo>,
   end?: boolean
 ): number {
   /**
-   * Field to compare on.
+   * Other node position field to compare on.
    *
-   * @const {Field} field
+   * @const {Field} otherField
    */
-  const field: Field = end ? 'end' : 'start'
+  const otherField: Field = end ? 'end' : 'start'
+
+  /**
+   * Node position field to compare on.
+   *
+   * @const {Field} nodeField
+   */
+  const nodeField: Field = otherField === 'end' ? 'start' : 'end'
 
   // compare positions
-  if (comment?.position?.start && node?.position?.[field]) {
+  if (node?.position?.[nodeField] && other?.position?.[otherField]) {
     return (
-      comment.position.start.line - node.position[field].line ||
-      comment.position.start.column - node.position[field].column
-    )
-  }
-
-  // compare source location
-  if (comment?.loc?.start && node?.loc?.[field]) {
-    return (
-      comment.loc.start.line - node.loc[field].line ||
-      comment.loc.start.column - node.loc[field].column
+      node.position[nodeField].line - other.position[otherField].line ||
+      node.position[nodeField].column - other.position[otherField].column
     )
   }
 

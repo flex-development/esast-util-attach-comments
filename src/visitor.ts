@@ -3,64 +3,98 @@
  * @module esast-util-attach-comments/visitor
  */
 
+import type { Comment, EsastNode } from '@flex-development/esast'
 import type { Optional } from '@flex-development/tutils'
-import type { Comment, Node } from 'estree'
-import { CONTINUE, EXIT } from 'estree-util-visit'
-import type { State, Visitor } from './types'
-import { keycheck, slice } from './utils'
-
-declare module 'estree' {
-  interface BaseNode {
-    comments?: Comment[] | undefined
-  }
-}
+import {
+  CONTINUE,
+  EXIT,
+  SKIP,
+  type Action,
+  type Index,
+  type VisitedAncestor,
+  type VisitedNode,
+  type VisitedParent,
+  type Visitor
+} from '@flex-development/unist-util-visit'
+import { ok } from 'devlop'
+import type { State } from './types'
+import { slice } from './utils'
 
 /**
  * Create a visitor to attach comments when entering or leaving a node.
  *
+ * @see {@linkcode EsastNode}
  * @see {@linkcode State}
  * @see {@linkcode Visitor}
  *
+ * @template {EsastNode} [T=EsastNode] - esast node
+ *
+ * @this {void}
+ *
  * @param {State} state - Visitor state
  * @param {boolean?} [leave] - Visiting nodes on exit?
- * @return {Visitor} Visitor function
+ * @return {Visitor<T>} Visitor function
  */
-function visitor(state: State, leave?: boolean): Visitor {
+function visitor<T extends EsastNode = EsastNode>(
+  this: void,
+  state: State,
+  leave?: boolean
+): Visitor<T> {
   /**
    * Attach comments when entering or leaving `node`.
    *
-   * @param {Node} node - Node being entered or exited
-   * @param {Optional<string>} key - Field at which `node` lives in its parent
-   * (or where a list of nodes live if `parent[key]` is an array)
-   * @return {typeof CONTINUE | typeof EXIT} Next action
+   * @see {@linkcode Action}
+   * @see {@linkcode Index}
+   * @see {@linkcode VisitedAncestor}
+   * @see {@linkcode VisitedNode}
+   * @see {@linkcode VisitedParent}
+   *
+   * @param {VisitedNode<T>} node - Node being entered or exited
+   * @param {Optional<Index>} index - Index of `node` in `parent`
+   * @param {Optional<VisitedParent<T>>} parent - Parent of `node`
+   * @param {VisitedAncestor<T>[]} ancestors - Ancestors of `node`, if any, with
+   * the last node being the grandparent of `node`
+   * @return {Action | Index} Next action or index
    */
-  return (node: Node, key: Optional<string>): typeof CONTINUE | typeof EXIT => {
-    if (!state.comments.length) return EXIT
+  return (
+    node: VisitedNode<T>,
+    index: Optional<Index>,
+    parent: Optional<VisitedParent<T>>,
+    ancestors: VisitedAncestor<T>[]
+  ): Action | Index => {
+    if (state.index >= state.comments.length) return EXIT
+    if (!parent || !node.position) return CONTINUE
+    if (node.type === 'comment') return SKIP
+    ok(typeof index === 'number', 'expected `index` to be a number')
 
-    if (keycheck(key)) {
-      if ((state.leave = !!leave)) {
-        node.comments!.push(...slice(state, node))
-        node.leadingComments = node.comments!.filter(n => n.leading)
-        node.trailingComments = node.comments!.filter(n => n.trailing)
+    /**
+     * Comments slice result.
+     *
+     * @var {Comment[]} result
+     */
+    let result: Comment[] = []
 
-        for (const [key, value] of Object.entries(node)) {
-          switch (key) {
-            case 'comments':
-            case 'leadingComments':
-            case 'trailingComments':
-              !(<Comment[]>value).length && delete node[key]
-              break
-            default:
-              break
-          }
-        }
-      } else {
-        node.comments = []
-        node.comments.push(...slice(state, node))
+    // attach comments
+    if (!leave) {
+      // insert comments positioned before node
+      result = slice(state, node)
+      parent.children.splice(index, 0, ...result)
+      index += result.length
+
+      // insert trailing comments
+      result = slice(state, node, undefined, true)
+      parent.children.splice(index + 1, 0, ...result)
+      index += result.length
+    } else {
+      // insert comments positioned after last node in tree
+      if (!ancestors.length && !parent.children[index + 1]) {
+        result = slice(state, node, true)
+        parent.children.splice(index + 1, 0, ...result)
+        index += result.length
       }
     }
 
-    return CONTINUE
+    return index + 1
   }
 }
 

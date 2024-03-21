@@ -1,0 +1,2643 @@
+[
+  {
+    "children": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "position": {
+                  "end": {
+                    "column": 21,
+                    "line": 46,
+                    "offset": 1115
+                  },
+                  "start": {
+                    "column": 6,
+                    "line": 46,
+                    "offset": 1100
+                  }
+                },
+                "type": "text",
+                "value": "Construct name."
+              }
+            ],
+            "position": {
+              "end": {
+                "column": 21,
+                "line": 46,
+                "offset": 1115
+              },
+              "start": {
+                "column": 6,
+                "line": 46,
+                "offset": 1100
+              }
+            },
+            "type": "paragraph"
+          }
+        ],
+        "position": {
+          "end": {
+            "column": 21,
+            "line": 46,
+            "offset": 1115
+          },
+          "start": {
+            "column": 6,
+            "line": 46,
+            "offset": 1100
+          }
+        },
+        "type": "description"
+      }
+    ],
+    "code": null,
+    "kind": "docblock",
+    "position": {
+      "end": {
+        "column": 6,
+        "line": 47,
+        "offset": 1121
+      },
+      "start": {
+        "column": 3,
+        "line": 45,
+        "offset": 1091
+      }
+    },
+    "type": "comment"
+  },
+  {
+    "children": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "position": {
+                  "end": {
+                    "column": 44,
+                    "line": 102,
+                    "offset": 2586
+                  },
+                  "start": {
+                    "column": 8,
+                    "line": 102,
+                    "offset": 2550
+                  }
+                },
+                "type": "text",
+                "value": "Begin processing a gemoji shortcode."
+              }
+            ],
+            "position": {
+              "end": {
+                "column": 44,
+                "line": 102,
+                "offset": 2586
+              },
+              "start": {
+                "column": 8,
+                "line": 102,
+                "offset": 2550
+              }
+            },
+            "type": "paragraph"
+          }
+        ],
+        "position": {
+          "end": {
+            "column": 44,
+            "line": 102,
+            "offset": 2586
+          },
+          "start": {
+            "column": 8,
+            "line": 102,
+            "offset": 2550
+          }
+        },
+        "type": "description"
+      },
+      {
+        "children": [
+          {
+            "position": {
+              "end": {
+                "column": 21,
+                "line": 104,
+                "offset": 2614
+              },
+              "start": {
+                "column": 15,
+                "line": 104,
+                "offset": 2608
+              }
+            },
+            "type": "typeExpression",
+            "value": "Code"
+          },
+          {
+            "position": {
+              "end": {
+                "column": 54,
+                "line": 104,
+                "offset": 2647
+              },
+              "start": {
+                "column": 22,
+                "line": 104,
+                "offset": 2615
+              }
+            },
+            "type": "text",
+            "value": "code - Character code to process"
+          }
+        ],
+        "name": "param",
+        "position": {
+          "end": {
+            "column": 54,
+            "line": 104,
+            "offset": 2647
+          },
+          "start": {
+            "column": 8,
+            "line": 104,
+            "offset": 2601
+          }
+        },
+        "tag": "@param",
+        "type": "blockTag"
+      },
+      {
+        "children": [
+          {
+            "position": {
+              "end": {
+                "column": 33,
+                "line": 105,
+                "offset": 2680
+              },
+              "start": {
+                "column": 16,
+                "line": 105,
+                "offset": 2663
+              }
+            },
+            "type": "typeExpression",
+            "value": "Optional<State>"
+          },
+          {
+            "position": {
+              "end": {
+                "column": 44,
+                "line": 105,
+                "offset": 2691
+              },
+              "start": {
+                "column": 34,
+                "line": 105,
+                "offset": 2681
+              }
+            },
+            "type": "text",
+            "value": "Next state"
+          }
+        ],
+        "name": "return",
+        "position": {
+          "end": {
+            "column": 44,
+            "line": 105,
+            "offset": 2691
+          },
+          "start": {
+            "column": 8,
+            "line": 105,
+            "offset": 2655
+          }
+        },
+        "tag": "@return",
+        "type": "blockTag"
+      }
+    ],
+    "code": null,
+    "kind": "docblock",
+    "position": {
+      "end": {
+        "column": 8,
+        "line": 106,
+        "offset": 2699
+      },
+      "start": {
+        "column": 5,
+        "line": 101,
+        "offset": 2539
+      }
+    },
+    "type": "comment"
+  },
+  {
+    "children": [
+      {
+        "position": {
+          "end": {
+            "column": 22,
+            "line": 85
+          },
+          "start": {
+            "column": 12,
+            "line": 85
+          }
+        },
+        "type": "text",
+        "value": "end gemoji"
+      }
+    ],
+    "kind": "block",
+    "position": {
+      "end": {
+        "column": 25,
+        "line": 85
+      },
+      "start": {
+        "column": 9,
+        "line": 85
+      }
+    },
+    "type": "comment"
+  },
+  {
+    "children": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "position": {
+                  "end": {
+                    "column": 56,
+                    "line": 63,
+                    "offset": 1471
+                  },
+                  "start": {
+                    "column": 6,
+                    "line": 63,
+                    "offset": 1421
+                  }
+                },
+                "type": "text",
+                "value": "Set up a state machine to process character codes."
+              }
+            ],
+            "position": {
+              "end": {
+                "column": 56,
+                "line": 63,
+                "offset": 1471
+              },
+              "start": {
+                "column": 6,
+                "line": 63,
+                "offset": 1421
+              }
+            },
+            "type": "paragraph"
+          }
+        ],
+        "position": {
+          "end": {
+            "column": 56,
+            "line": 63,
+            "offset": 1471
+          },
+          "start": {
+            "column": 6,
+            "line": 63,
+            "offset": 1421
+          }
+        },
+        "type": "description"
+      },
+      {
+        "children": [
+          {
+            "name": "linkcode",
+            "position": {
+              "end": {
+                "column": 27,
+                "line": 65,
+                "offset": 1503
+              },
+              "start": {
+                "column": 11,
+                "line": 65,
+                "offset": 1487
+              }
+            },
+            "tag": "@linkcode",
+            "type": "inlineTag",
+            "value": "Code"
+          }
+        ],
+        "name": "see",
+        "position": {
+          "end": {
+            "column": 27,
+            "line": 65,
+            "offset": 1503
+          },
+          "start": {
+            "column": 6,
+            "line": 65,
+            "offset": 1482
+          }
+        },
+        "tag": "@see",
+        "type": "blockTag"
+      },
+      {
+        "children": [
+          {
+            "name": "linkcode",
+            "position": {
+              "end": {
+                "column": 30,
+                "line": 66,
+                "offset": 1533
+              },
+              "start": {
+                "column": 11,
+                "line": 66,
+                "offset": 1514
+              }
+            },
+            "tag": "@linkcode",
+            "type": "inlineTag",
+            "value": "Effects"
+          }
+        ],
+        "name": "see",
+        "position": {
+          "end": {
+            "column": 30,
+            "line": 66,
+            "offset": 1533
+          },
+          "start": {
+            "column": 6,
+            "line": 66,
+            "offset": 1509
+          }
+        },
+        "tag": "@see",
+        "type": "blockTag"
+      },
+      {
+        "children": [
+          {
+            "name": "linkcode",
+            "position": {
+              "end": {
+                "column": 28,
+                "line": 67,
+                "offset": 1561
+              },
+              "start": {
+                "column": 11,
+                "line": 67,
+                "offset": 1544
+              }
+            },
+            "tag": "@linkcode",
+            "type": "inlineTag",
+            "value": "State"
+          }
+        ],
+        "name": "see",
+        "position": {
+          "end": {
+            "column": 28,
+            "line": 67,
+            "offset": 1561
+          },
+          "start": {
+            "column": 6,
+            "line": 67,
+            "offset": 1539
+          }
+        },
+        "tag": "@see",
+        "type": "blockTag"
+      },
+      {
+        "children": [
+          {
+            "position": {
+              "end": {
+                "column": 29,
+                "line": 69,
+                "offset": 1595
+              },
+              "start": {
+                "column": 12,
+                "line": 69,
+                "offset": 1578
+              }
+            },
+            "type": "typeExpression",
+            "value": "TokenizeContext"
+          }
+        ],
+        "name": "this",
+        "position": {
+          "end": {
+            "column": 29,
+            "line": 69,
+            "offset": 1595
+          },
+          "start": {
+            "column": 6,
+            "line": 69,
+            "offset": 1572
+          }
+        },
+        "tag": "@this",
+        "type": "blockTag"
+      },
+      {
+        "children": [
+          {
+            "position": {
+              "end": {
+                "column": 22,
+                "line": 71,
+                "offset": 1622
+              },
+              "start": {
+                "column": 13,
+                "line": 71,
+                "offset": 1613
+              }
+            },
+            "type": "typeExpression",
+            "value": "Effects"
+          },
+          {
+            "position": {
+              "end": {
+                "column": 75,
+                "line": 71,
+                "offset": 1675
+              },
+              "start": {
+                "column": 23,
+                "line": 71,
+                "offset": 1623
+              }
+            },
+            "type": "text",
+            "value": "effects - Context object to transition state machine"
+          }
+        ],
+        "name": "param",
+        "position": {
+          "end": {
+            "column": 75,
+            "line": 71,
+            "offset": 1675
+          },
+          "start": {
+            "column": 6,
+            "line": 71,
+            "offset": 1606
+          }
+        },
+        "tag": "@param",
+        "type": "blockTag"
+      },
+      {
+        "children": [
+          {
+            "position": {
+              "end": {
+                "column": 20,
+                "line": 72,
+                "offset": 1695
+              },
+              "start": {
+                "column": 13,
+                "line": 72,
+                "offset": 1688
+              }
+            },
+            "type": "typeExpression",
+            "value": "State"
+          },
+          {
+            "position": {
+              "end": {
+                "column": 48,
+                "line": 72,
+                "offset": 1723
+              },
+              "start": {
+                "column": 21,
+                "line": 72,
+                "offset": 1696
+              }
+            },
+            "type": "text",
+            "value": "ok - Success state function"
+          }
+        ],
+        "name": "param",
+        "position": {
+          "end": {
+            "column": 48,
+            "line": 72,
+            "offset": 1723
+          },
+          "start": {
+            "column": 6,
+            "line": 72,
+            "offset": 1681
+          }
+        },
+        "tag": "@param",
+        "type": "blockTag"
+      },
+      {
+        "children": [
+          {
+            "position": {
+              "end": {
+                "column": 20,
+                "line": 73,
+                "offset": 1743
+              },
+              "start": {
+                "column": 13,
+                "line": 73,
+                "offset": 1736
+              }
+            },
+            "type": "typeExpression",
+            "value": "State"
+          },
+          {
+            "position": {
+              "end": {
+                "column": 47,
+                "line": 73,
+                "offset": 1770
+              },
+              "start": {
+                "column": 21,
+                "line": 73,
+                "offset": 1744
+              }
+            },
+            "type": "text",
+            "value": "nok - Error state function"
+          }
+        ],
+        "name": "param",
+        "position": {
+          "end": {
+            "column": 47,
+            "line": 73,
+            "offset": 1770
+          },
+          "start": {
+            "column": 6,
+            "line": 73,
+            "offset": 1729
+          }
+        },
+        "tag": "@param",
+        "type": "blockTag"
+      },
+      {
+        "children": [
+          {
+            "position": {
+              "end": {
+                "column": 21,
+                "line": 74,
+                "offset": 1791
+              },
+              "start": {
+                "column": 14,
+                "line": 74,
+                "offset": 1784
+              }
+            },
+            "type": "typeExpression",
+            "value": "State"
+          },
+          {
+            "position": {
+              "end": {
+                "column": 35,
+                "line": 74,
+                "offset": 1805
+              },
+              "start": {
+                "column": 22,
+                "line": 74,
+                "offset": 1792
+              }
+            },
+            "type": "text",
+            "value": "Initial state"
+          }
+        ],
+        "name": "return",
+        "position": {
+          "end": {
+            "column": 35,
+            "line": 74,
+            "offset": 1805
+          },
+          "start": {
+            "column": 6,
+            "line": 74,
+            "offset": 1776
+          }
+        },
+        "tag": "@return",
+        "type": "blockTag"
+      }
+    ],
+    "code": null,
+    "kind": "docblock",
+    "position": {
+      "end": {
+        "column": 6,
+        "line": 75,
+        "offset": 1811
+      },
+      "start": {
+        "column": 3,
+        "line": 62,
+        "offset": 1412
+      }
+    },
+    "type": "comment"
+  },
+  {
+    "children": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "position": {
+                  "end": {
+                    "column": 18,
+                    "line": 26,
+                    "offset": 714
+                  },
+                  "start": {
+                    "column": 4,
+                    "line": 26,
+                    "offset": 700
+                  }
+                },
+                "type": "text",
+                "value": "Guard whether "
+              },
+              {
+                "position": {
+                  "end": {
+                    "column": 24,
+                    "line": 26,
+                    "offset": 720
+                  },
+                  "start": {
+                    "column": 18,
+                    "line": 26,
+                    "offset": 714
+                  }
+                },
+                "type": "inlineCode",
+                "value": "code"
+              },
+              {
+                "position": {
+                  "end": {
+                    "column": 50,
+                    "line": 26,
+                    "offset": 746
+                  },
+                  "start": {
+                    "column": 24,
+                    "line": 26,
+                    "offset": 720
+                  }
+                },
+                "type": "text",
+                "value": " can come before a gemoji."
+              }
+            ],
+            "position": {
+              "end": {
+                "column": 50,
+                "line": 26,
+                "offset": 746
+              },
+              "start": {
+                "column": 4,
+                "line": 26,
+                "offset": 700
+              }
+            },
+            "type": "paragraph"
+          }
+        ],
+        "position": {
+          "end": {
+            "column": 50,
+            "line": 26,
+            "offset": 746
+          },
+          "start": {
+            "column": 4,
+            "line": 26,
+            "offset": 700
+          }
+        },
+        "type": "description"
+      },
+      {
+        "children": [
+          {
+            "name": "linkcode",
+            "position": {
+              "end": {
+                "column": 25,
+                "line": 28,
+                "offset": 774
+              },
+              "start": {
+                "column": 9,
+                "line": 28,
+                "offset": 758
+              }
+            },
+            "tag": "@linkcode",
+            "type": "inlineTag",
+            "value": "Code"
+          }
+        ],
+        "name": "see",
+        "position": {
+          "end": {
+            "column": 25,
+            "line": 28,
+            "offset": 774
+          },
+          "start": {
+            "column": 4,
+            "line": 28,
+            "offset": 753
+          }
+        },
+        "tag": "@see",
+        "type": "blockTag"
+      },
+      {
+        "children": [
+          {
+            "position": {
+              "end": {
+                "column": 27,
+                "line": 30,
+                "offset": 804
+              },
+              "start": {
+                "column": 10,
+                "line": 30,
+                "offset": 787
+              }
+            },
+            "type": "typeExpression",
+            "value": "TokenizeContext"
+          }
+        ],
+        "name": "this",
+        "position": {
+          "end": {
+            "column": 27,
+            "line": 30,
+            "offset": 804
+          },
+          "start": {
+            "column": 4,
+            "line": 30,
+            "offset": 781
+          }
+        },
+        "tag": "@this",
+        "type": "blockTag"
+      },
+      {
+        "children": [
+          {
+            "position": {
+              "end": {
+                "column": 17,
+                "line": 32,
+                "offset": 824
+              },
+              "start": {
+                "column": 11,
+                "line": 32,
+                "offset": 818
+              }
+            },
+            "type": "typeExpression",
+            "value": "Code"
+          },
+          {
+            "position": {
+              "end": {
+                "column": 48,
+                "line": 32,
+                "offset": 855
+              },
+              "start": {
+                "column": 18,
+                "line": 32,
+                "offset": 825
+              }
+            },
+            "type": "text",
+            "value": "code - Previous character code"
+          }
+        ],
+        "name": "param",
+        "position": {
+          "end": {
+            "column": 48,
+            "line": 32,
+            "offset": 855
+          },
+          "start": {
+            "column": 4,
+            "line": 32,
+            "offset": 811
+          }
+        },
+        "tag": "@param",
+        "type": "blockTag"
+      },
+      {
+        "children": [
+          {
+            "position": {
+              "end": {
+                "column": 21,
+                "line": 33,
+                "offset": 876
+              },
+              "start": {
+                "column": 12,
+                "line": 33,
+                "offset": 867
+              }
+            },
+            "type": "typeExpression",
+            "value": "boolean"
+          },
+          {
+            "position": {
+              "end": {
+                "column": 28,
+                "line": 33,
+                "offset": 883
+              },
+              "start": {
+                "column": 22,
+                "line": 33,
+                "offset": 877
+              }
+            },
+            "type": "inlineCode",
+            "value": "true"
+          },
+          {
+            "position": {
+              "end": {
+                "column": 32,
+                "line": 33,
+                "offset": 887
+              },
+              "start": {
+                "column": 28,
+                "line": 33,
+                "offset": 883
+              }
+            },
+            "type": "text",
+            "value": " if "
+          },
+          {
+            "position": {
+              "end": {
+                "column": 38,
+                "line": 33,
+                "offset": 893
+              },
+              "start": {
+                "column": 32,
+                "line": 33,
+                "offset": 887
+              }
+            },
+            "type": "inlineCode",
+            "value": "code"
+          },
+          {
+            "position": {
+              "end": {
+                "column": 63,
+                "line": 33,
+                "offset": 918
+              },
+              "start": {
+                "column": 38,
+                "line": 33,
+                "offset": 893
+              }
+            },
+            "type": "text",
+            "value": " allowed before construct"
+          }
+        ],
+        "name": "return",
+        "position": {
+          "end": {
+            "column": 63,
+            "line": 33,
+            "offset": 918
+          },
+          "start": {
+            "column": 4,
+            "line": 33,
+            "offset": 859
+          }
+        },
+        "tag": "@return",
+        "type": "blockTag"
+      }
+    ],
+    "code": null,
+    "kind": "docblock",
+    "position": {
+      "end": {
+        "column": 4,
+        "line": 34,
+        "offset": 922
+      },
+      "start": {
+        "column": 1,
+        "line": 25,
+        "offset": 693
+      }
+    },
+    "type": "comment"
+  },
+  {
+    "children": [
+      {
+        "position": {
+          "end": {
+            "column": 25,
+            "line": 89
+          },
+          "start": {
+            "column": 12,
+            "line": 89
+          }
+        },
+        "type": "text",
+        "value": "inside gemoji"
+      }
+    ],
+    "kind": "block",
+    "position": {
+      "end": {
+        "column": 28,
+        "line": 89
+      },
+      "start": {
+        "column": 9,
+        "line": 89
+      }
+    },
+    "type": "comment"
+  },
+  {
+    "children": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "position": {
+                  "end": {
+                    "column": 12,
+                    "line": 40,
+                    "offset": 1025
+                  },
+                  "start": {
+                    "column": 4,
+                    "line": 40,
+                    "offset": 1017
+                  }
+                },
+                "type": "text",
+                "value": "Gemoji ("
+              },
+              {
+                "position": {
+                  "end": {
+                    "column": 18,
+                    "line": 40,
+                    "offset": 1031
+                  },
+                  "start": {
+                    "column": 12,
+                    "line": 40,
+                    "offset": 1025
+                  }
+                },
+                "type": "inlineCode",
+                "value": ":+1:"
+              },
+              {
+                "position": {
+                  "end": {
+                    "column": 30,
+                    "line": 40,
+                    "offset": 1043
+                  },
+                  "start": {
+                    "column": 18,
+                    "line": 40,
+                    "offset": 1031
+                  }
+                },
+                "type": "text",
+                "value": ") construct."
+              }
+            ],
+            "position": {
+              "end": {
+                "column": 30,
+                "line": 40,
+                "offset": 1043
+              },
+              "start": {
+                "column": 4,
+                "line": 40,
+                "offset": 1017
+              }
+            },
+            "type": "paragraph"
+          }
+        ],
+        "position": {
+          "end": {
+            "column": 30,
+            "line": 40,
+            "offset": 1043
+          },
+          "start": {
+            "column": 4,
+            "line": 40,
+            "offset": 1017
+          }
+        },
+        "type": "description"
+      },
+      {
+        "children": [
+          {
+            "position": {
+              "end": {
+                "column": 21,
+                "line": 42,
+                "offset": 1067
+              },
+              "start": {
+                "column": 10,
+                "line": 42,
+                "offset": 1056
+              }
+            },
+            "type": "typeExpression",
+            "value": "Construct"
+          }
+        ],
+        "name": "type",
+        "position": {
+          "end": {
+            "column": 21,
+            "line": 42,
+            "offset": 1067
+          },
+          "start": {
+            "column": 4,
+            "line": 42,
+            "offset": 1050
+          }
+        },
+        "tag": "@type",
+        "type": "blockTag"
+      }
+    ],
+    "code": null,
+    "kind": "docblock",
+    "position": {
+      "end": {
+        "column": 4,
+        "line": 43,
+        "offset": 1071
+      },
+      "start": {
+        "column": 1,
+        "line": 39,
+        "offset": 1010
+      }
+    },
+    "type": "comment"
+  },
+  {
+    "children": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "position": {
+                  "end": {
+                    "column": 49,
+                    "line": 121,
+                    "offset": 3053
+                  },
+                  "start": {
+                    "column": 8,
+                    "line": 121,
+                    "offset": 3012
+                  }
+                },
+                "type": "text",
+                "value": "Process the start of a gemoji shortcode ("
+              },
+              {
+                "position": {
+                  "end": {
+                    "column": 52,
+                    "line": 121,
+                    "offset": 3056
+                  },
+                  "start": {
+                    "column": 49,
+                    "line": 121,
+                    "offset": 3053
+                  }
+                },
+                "type": "inlineCode",
+                "value": ":"
+              },
+              {
+                "position": {
+                  "end": {
+                    "column": 54,
+                    "line": 121,
+                    "offset": 3058
+                  },
+                  "start": {
+                    "column": 52,
+                    "line": 121,
+                    "offset": 3056
+                  }
+                },
+                "type": "text",
+                "value": ")."
+              }
+            ],
+            "position": {
+              "end": {
+                "column": 54,
+                "line": 121,
+                "offset": 3058
+              },
+              "start": {
+                "column": 8,
+                "line": 121,
+                "offset": 3012
+              }
+            },
+            "type": "paragraph"
+          }
+        ],
+        "position": {
+          "end": {
+            "column": 54,
+            "line": 121,
+            "offset": 3058
+          },
+          "start": {
+            "column": 8,
+            "line": 121,
+            "offset": 3012
+          }
+        },
+        "type": "description"
+      },
+      {
+        "children": [
+          {
+            "position": {
+              "end": {
+                "column": 21,
+                "line": 123,
+                "offset": 3086
+              },
+              "start": {
+                "column": 15,
+                "line": 123,
+                "offset": 3080
+              }
+            },
+            "type": "typeExpression",
+            "value": "Code"
+          },
+          {
+            "position": {
+              "end": {
+                "column": 54,
+                "line": 123,
+                "offset": 3119
+              },
+              "start": {
+                "column": 22,
+                "line": 123,
+                "offset": 3087
+              }
+            },
+            "type": "text",
+            "value": "code - Character code to process"
+          }
+        ],
+        "name": "param",
+        "position": {
+          "end": {
+            "column": 54,
+            "line": 123,
+            "offset": 3119
+          },
+          "start": {
+            "column": 8,
+            "line": 123,
+            "offset": 3073
+          }
+        },
+        "tag": "@param",
+        "type": "blockTag"
+      },
+      {
+        "children": [
+          {
+            "position": {
+              "end": {
+                "column": 23,
+                "line": 124,
+                "offset": 3142
+              },
+              "start": {
+                "column": 16,
+                "line": 124,
+                "offset": 3135
+              }
+            },
+            "type": "typeExpression",
+            "value": "State"
+          },
+          {
+            "position": {
+              "end": {
+                "column": 34,
+                "line": 124,
+                "offset": 3153
+              },
+              "start": {
+                "column": 24,
+                "line": 124,
+                "offset": 3143
+              }
+            },
+            "type": "text",
+            "value": "Next state"
+          }
+        ],
+        "name": "return",
+        "position": {
+          "end": {
+            "column": 34,
+            "line": 124,
+            "offset": 3153
+          },
+          "start": {
+            "column": 8,
+            "line": 124,
+            "offset": 3127
+          }
+        },
+        "tag": "@return",
+        "type": "blockTag"
+      }
+    ],
+    "code": null,
+    "kind": "docblock",
+    "position": {
+      "end": {
+        "column": 8,
+        "line": 125,
+        "offset": 3161
+      },
+      "start": {
+        "column": 5,
+        "line": 120,
+        "offset": 3001
+      }
+    },
+    "type": "comment"
+  },
+  {
+    "children": [
+      {
+        "position": {
+          "end": {
+            "column": 45,
+            "line": 97
+          },
+          "start": {
+            "column": 31,
+            "line": 97
+          }
+        },
+        "type": "text",
+        "value": "invalid gemoji"
+      }
+    ],
+    "kind": "block",
+    "position": {
+      "end": {
+        "column": 48,
+        "line": 97
+      },
+      "start": {
+        "column": 29,
+        "line": 97
+      }
+    },
+    "type": "comment"
+  },
+  {
+    "children": [
+      {
+        "children": [
+          {
+            "position": {
+              "end": {
+                "column": 50,
+                "line": 18,
+                "offset": 422
+              },
+              "start": {
+                "column": 13,
+                "line": 18,
+                "offset": 385
+              }
+            },
+            "type": "typeExpression",
+            "value": "import('micromark-util-types').Code"
+          },
+          {
+            "position": {
+              "end": {
+                "column": 49,
+                "line": 18,
+                "offset": 421
+              },
+              "start": {
+                "column": 45,
+                "line": 18,
+                "offset": 417
+              }
+            },
+            "type": "text",
+            "value": "Code"
+          }
+        ],
+        "name": "typedef",
+        "position": {
+          "end": {
+            "column": 55,
+            "line": 18,
+            "offset": 427
+          },
+          "start": {
+            "column": 4,
+            "line": 18,
+            "offset": 376
+          }
+        },
+        "tag": "@typedef",
+        "type": "blockTag"
+      },
+      {
+        "children": [
+          {
+            "position": {
+              "end": {
+                "column": 55,
+                "line": 19,
+                "offset": 482
+              },
+              "start": {
+                "column": 13,
+                "line": 19,
+                "offset": 440
+              }
+            },
+            "type": "typeExpression",
+            "value": "import('micromark-util-types').Construct"
+          },
+          {
+            "position": {
+              "end": {
+                "column": 54,
+                "line": 19,
+                "offset": 481
+              },
+              "start": {
+                "column": 45,
+                "line": 19,
+                "offset": 472
+              }
+            },
+            "type": "text",
+            "value": "Construct"
+          }
+        ],
+        "name": "typedef",
+        "position": {
+          "end": {
+            "column": 65,
+            "line": 19,
+            "offset": 492
+          },
+          "start": {
+            "column": 4,
+            "line": 19,
+            "offset": 431
+          }
+        },
+        "tag": "@typedef",
+        "type": "blockTag"
+      },
+      {
+        "children": [
+          {
+            "position": {
+              "end": {
+                "column": 53,
+                "line": 20,
+                "offset": 545
+              },
+              "start": {
+                "column": 13,
+                "line": 20,
+                "offset": 505
+              }
+            },
+            "type": "typeExpression",
+            "value": "import('micromark-util-types').Effects"
+          },
+          {
+            "position": {
+              "end": {
+                "column": 52,
+                "line": 20,
+                "offset": 544
+              },
+              "start": {
+                "column": 45,
+                "line": 20,
+                "offset": 537
+              }
+            },
+            "type": "text",
+            "value": "Effects"
+          }
+        ],
+        "name": "typedef",
+        "position": {
+          "end": {
+            "column": 61,
+            "line": 20,
+            "offset": 553
+          },
+          "start": {
+            "column": 4,
+            "line": 20,
+            "offset": 496
+          }
+        },
+        "tag": "@typedef",
+        "type": "blockTag"
+      },
+      {
+        "children": [
+          {
+            "position": {
+              "end": {
+                "column": 51,
+                "line": 21,
+                "offset": 604
+              },
+              "start": {
+                "column": 13,
+                "line": 21,
+                "offset": 566
+              }
+            },
+            "type": "typeExpression",
+            "value": "import('micromark-util-types').State"
+          },
+          {
+            "position": {
+              "end": {
+                "column": 50,
+                "line": 21,
+                "offset": 603
+              },
+              "start": {
+                "column": 45,
+                "line": 21,
+                "offset": 598
+              }
+            },
+            "type": "text",
+            "value": "State"
+          }
+        ],
+        "name": "typedef",
+        "position": {
+          "end": {
+            "column": 57,
+            "line": 21,
+            "offset": 610
+          },
+          "start": {
+            "column": 4,
+            "line": 21,
+            "offset": 557
+          }
+        },
+        "tag": "@typedef",
+        "type": "blockTag"
+      },
+      {
+        "children": [
+          {
+            "position": {
+              "end": {
+                "column": 61,
+                "line": 22,
+                "offset": 671
+              },
+              "start": {
+                "column": 13,
+                "line": 22,
+                "offset": 623
+              }
+            },
+            "type": "typeExpression",
+            "value": "import('micromark-util-types').TokenizeContext"
+          },
+          {
+            "position": {
+              "end": {
+                "column": 60,
+                "line": 22,
+                "offset": 670
+              },
+              "start": {
+                "column": 45,
+                "line": 22,
+                "offset": 655
+              }
+            },
+            "type": "text",
+            "value": "TokenizeContext"
+          }
+        ],
+        "name": "typedef",
+        "position": {
+          "end": {
+            "column": 77,
+            "line": 22,
+            "offset": 687
+          },
+          "start": {
+            "column": 4,
+            "line": 22,
+            "offset": 614
+          }
+        },
+        "tag": "@typedef",
+        "type": "blockTag"
+      }
+    ],
+    "code": null,
+    "kind": "docblock",
+    "position": {
+      "end": {
+        "column": 4,
+        "line": 23,
+        "offset": 691
+      },
+      "start": {
+        "column": 1,
+        "line": 17,
+        "offset": 369
+      }
+    },
+    "type": "comment"
+  },
+  {
+    "children": [
+      {
+        "position": {
+          "end": {
+            "column": 36,
+            "line": 113
+          },
+          "start": {
+            "column": 12,
+            "line": 113
+          }
+        },
+        "type": "text",
+        "value": "entering possible gemoji"
+      }
+    ],
+    "kind": "line",
+    "position": {
+      "end": {
+        "column": 36,
+        "line": 113
+      },
+      "start": {
+        "column": 9,
+        "line": 113
+      }
+    },
+    "type": "comment"
+  },
+  {
+    "children": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "position": {
+                  "end": {
+                    "column": 25,
+                    "line": 11,
+                    "offset": 255
+                  },
+                  "start": {
+                    "column": 4,
+                    "line": 11,
+                    "offset": 234
+                  }
+                },
+                "type": "text",
+                "value": "Construct a union of "
+              },
+              {
+                "position": {
+                  "end": {
+                    "column": 28,
+                    "line": 11,
+                    "offset": 258
+                  },
+                  "start": {
+                    "column": 25,
+                    "line": 11,
+                    "offset": 255
+                  }
+                },
+                "type": "inlineCode",
+                "value": "T"
+              },
+              {
+                "position": {
+                  "end": {
+                    "column": 33,
+                    "line": 11,
+                    "offset": 263
+                  },
+                  "start": {
+                    "column": 28,
+                    "line": 11,
+                    "offset": 258
+                  }
+                },
+                "type": "text",
+                "value": " and "
+              },
+              {
+                "position": {
+                  "end": {
+                    "column": 44,
+                    "line": 11,
+                    "offset": 274
+                  },
+                  "start": {
+                    "column": 33,
+                    "line": 11,
+                    "offset": 263
+                  }
+                },
+                "type": "inlineCode",
+                "value": "undefined"
+              },
+              {
+                "position": {
+                  "end": {
+                    "column": 45,
+                    "line": 11,
+                    "offset": 275
+                  },
+                  "start": {
+                    "column": 44,
+                    "line": 11,
+                    "offset": 274
+                  }
+                },
+                "type": "text",
+                "value": "."
+              }
+            ],
+            "position": {
+              "end": {
+                "column": 45,
+                "line": 11,
+                "offset": 275
+              },
+              "start": {
+                "column": 4,
+                "line": 11,
+                "offset": 234
+              }
+            },
+            "type": "paragraph"
+          }
+        ],
+        "position": {
+          "end": {
+            "column": 45,
+            "line": 11,
+            "offset": 275
+          },
+          "start": {
+            "column": 4,
+            "line": 11,
+            "offset": 234
+          }
+        },
+        "type": "description"
+      },
+      {
+        "children": [
+          {
+            "position": {
+              "end": {
+                "column": 15,
+                "line": 13,
+                "offset": 293
+              },
+              "start": {
+                "column": 14,
+                "line": 13,
+                "offset": 292
+              }
+            },
+            "type": "text",
+            "value": "T"
+          }
+        ],
+        "name": "template",
+        "position": {
+          "end": {
+            "column": 15,
+            "line": 13,
+            "offset": 293
+          },
+          "start": {
+            "column": 4,
+            "line": 13,
+            "offset": 282
+          }
+        },
+        "tag": "@template",
+        "type": "blockTag"
+      },
+      {
+        "children": [
+          {
+            "position": {
+              "end": {
+                "column": 61,
+                "line": 14,
+                "offset": 354
+              },
+              "start": {
+                "column": 13,
+                "line": 14,
+                "offset": 306
+              }
+            },
+            "type": "typeExpression",
+            "value": "import('@flex-development/tutils').Optional<T>"
+          },
+          {
+            "position": {
+              "end": {
+                "column": 57,
+                "line": 14,
+                "offset": 350
+              },
+              "start": {
+                "column": 49,
+                "line": 14,
+                "offset": 342
+              }
+            },
+            "type": "text",
+            "value": "Optional"
+          }
+        ],
+        "name": "typedef",
+        "position": {
+          "end": {
+            "column": 70,
+            "line": 14,
+            "offset": 363
+          },
+          "start": {
+            "column": 4,
+            "line": 14,
+            "offset": 297
+          }
+        },
+        "tag": "@typedef",
+        "type": "blockTag"
+      }
+    ],
+    "code": null,
+    "kind": "docblock",
+    "position": {
+      "end": {
+        "column": 4,
+        "line": 15,
+        "offset": 367
+      },
+      "start": {
+        "column": 1,
+        "line": 10,
+        "offset": 227
+      }
+    },
+    "type": "comment"
+  },
+  {
+    "children": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "position": {
+                  "end": {
+                    "column": 28,
+                    "line": 78,
+                    "offset": 1878
+                  },
+                  "start": {
+                    "column": 8,
+                    "line": 78,
+                    "offset": 1858
+                  }
+                },
+                "type": "text",
+                "value": "Process the inside ("
+              },
+              {
+                "position": {
+                  "end": {
+                    "column": 32,
+                    "line": 78,
+                    "offset": 1882
+                  },
+                  "start": {
+                    "column": 28,
+                    "line": 78,
+                    "offset": 1878
+                  }
+                },
+                "type": "inlineCode",
+                "value": "+1"
+              },
+              {
+                "position": {
+                  "end": {
+                    "column": 43,
+                    "line": 78,
+                    "offset": 1893
+                  },
+                  "start": {
+                    "column": 32,
+                    "line": 78,
+                    "offset": 1882
+                  }
+                },
+                "type": "text",
+                "value": ") and end ("
+              },
+              {
+                "position": {
+                  "end": {
+                    "column": 46,
+                    "line": 78,
+                    "offset": 1896
+                  },
+                  "start": {
+                    "column": 43,
+                    "line": 78,
+                    "offset": 1893
+                  }
+                },
+                "type": "inlineCode",
+                "value": ":"
+              },
+              {
+                "position": {
+                  "end": {
+                    "column": 70,
+                    "line": 78,
+                    "offset": 1920
+                  },
+                  "start": {
+                    "column": 46,
+                    "line": 78,
+                    "offset": 1896
+                  }
+                },
+                "type": "text",
+                "value": ") of a gemoji shortcode."
+              }
+            ],
+            "position": {
+              "end": {
+                "column": 70,
+                "line": 78,
+                "offset": 1920
+              },
+              "start": {
+                "column": 8,
+                "line": 78,
+                "offset": 1858
+              }
+            },
+            "type": "paragraph"
+          }
+        ],
+        "position": {
+          "end": {
+            "column": 70,
+            "line": 78,
+            "offset": 1920
+          },
+          "start": {
+            "column": 8,
+            "line": 78,
+            "offset": 1858
+          }
+        },
+        "type": "description"
+      },
+      {
+        "children": [
+          {
+            "position": {
+              "end": {
+                "column": 21,
+                "line": 80,
+                "offset": 1948
+              },
+              "start": {
+                "column": 15,
+                "line": 80,
+                "offset": 1942
+              }
+            },
+            "type": "typeExpression",
+            "value": "Code"
+          },
+          {
+            "position": {
+              "end": {
+                "column": 54,
+                "line": 80,
+                "offset": 1981
+              },
+              "start": {
+                "column": 22,
+                "line": 80,
+                "offset": 1949
+              }
+            },
+            "type": "text",
+            "value": "code - Character code to process"
+          }
+        ],
+        "name": "param",
+        "position": {
+          "end": {
+            "column": 54,
+            "line": 80,
+            "offset": 1981
+          },
+          "start": {
+            "column": 8,
+            "line": 80,
+            "offset": 1935
+          }
+        },
+        "tag": "@param",
+        "type": "blockTag"
+      },
+      {
+        "children": [
+          {
+            "position": {
+              "end": {
+                "column": 33,
+                "line": 81,
+                "offset": 2014
+              },
+              "start": {
+                "column": 16,
+                "line": 81,
+                "offset": 1997
+              }
+            },
+            "type": "typeExpression",
+            "value": "Optional<State>"
+          },
+          {
+            "position": {
+              "end": {
+                "column": 44,
+                "line": 81,
+                "offset": 2025
+              },
+              "start": {
+                "column": 34,
+                "line": 81,
+                "offset": 2015
+              }
+            },
+            "type": "text",
+            "value": "Next state"
+          }
+        ],
+        "name": "return",
+        "position": {
+          "end": {
+            "column": 44,
+            "line": 81,
+            "offset": 2025
+          },
+          "start": {
+            "column": 8,
+            "line": 81,
+            "offset": 1989
+          }
+        },
+        "tag": "@return",
+        "type": "blockTag"
+      }
+    ],
+    "code": null,
+    "kind": "docblock",
+    "position": {
+      "end": {
+        "column": 8,
+        "line": 82,
+        "offset": 2033
+      },
+      "start": {
+        "column": 5,
+        "line": 77,
+        "offset": 1847
+      }
+    },
+    "type": "comment"
+  },
+  {
+    "children": [
+      {
+        "position": {
+          "end": {
+            "column": 46,
+            "line": 137
+          },
+          "start": {
+            "column": 3,
+            "line": 137
+          }
+        },
+        "type": "text",
+        "value": "# sourceMappingURL=gemoji-shortcode.mjs.map"
+      }
+    ],
+    "kind": "line",
+    "position": {
+      "end": {
+        "column": 46,
+        "line": 137
+      },
+      "start": {
+        "column": 1,
+        "line": 137
+      }
+    },
+    "type": "comment"
+  },
+  {
+    "children": [
+      {
+        "children": [
+          {
+            "position": {
+              "end": {
+                "column": 36,
+                "line": 2,
+                "offset": 39
+              },
+              "start": {
+                "column": 10,
+                "line": 2,
+                "offset": 13
+              }
+            },
+            "type": "text",
+            "value": "Fixtures - gemojiShortcode"
+          }
+        ],
+        "name": "file",
+        "position": {
+          "end": {
+            "column": 36,
+            "line": 2,
+            "offset": 39
+          },
+          "start": {
+            "column": 4,
+            "line": 2,
+            "offset": 7
+          }
+        },
+        "tag": "@file",
+        "type": "blockTag"
+      },
+      {
+        "children": [
+          {
+            "position": {
+              "end": {
+                "column": 36,
+                "line": 3,
+                "offset": 75
+              },
+              "start": {
+                "column": 12,
+                "line": 3,
+                "offset": 51
+              }
+            },
+            "type": "text",
+            "value": "fixtures/gemojiShortcode"
+          }
+        ],
+        "name": "module",
+        "position": {
+          "end": {
+            "column": 36,
+            "line": 3,
+            "offset": 75
+          },
+          "start": {
+            "column": 4,
+            "line": 3,
+            "offset": 43
+          }
+        },
+        "tag": "@module",
+        "type": "blockTag"
+      }
+    ],
+    "code": null,
+    "kind": "docblock",
+    "position": {
+      "end": {
+        "column": 4,
+        "line": 4,
+        "offset": 79
+      },
+      "start": {
+        "column": 1,
+        "line": 1,
+        "offset": 0
+      }
+    },
+    "type": "comment"
+  },
+  {
+    "children": [
+      {
+        "position": {
+          "end": {
+            "column": 47,
+            "line": 109
+          },
+          "start": {
+            "column": 12,
+            "line": 109
+          }
+        },
+        "type": "text",
+        "value": "ignore lone and back to back colons"
+      }
+    ],
+    "kind": "line",
+    "position": {
+      "end": {
+        "column": 47,
+        "line": 109
+      },
+      "start": {
+        "column": 9,
+        "line": 109
+      }
+    },
+    "type": "comment"
+  },
+  {
+    "children": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "position": {
+                  "end": {
+                    "column": 20,
+                    "line": 51,
+                    "offset": 1166
+                  },
+                  "start": {
+                    "column": 6,
+                    "line": 51,
+                    "offset": 1152
+                  }
+                },
+                "type": "text",
+                "value": "Guard whether "
+              },
+              {
+                "position": {
+                  "end": {
+                    "column": 26,
+                    "line": 51,
+                    "offset": 1172
+                  },
+                  "start": {
+                    "column": 20,
+                    "line": 51,
+                    "offset": 1166
+                  }
+                },
+                "type": "inlineCode",
+                "value": "code"
+              },
+              {
+                "position": {
+                  "end": {
+                    "column": 58,
+                    "line": 51,
+                    "offset": 1204
+                  },
+                  "start": {
+                    "column": 26,
+                    "line": 51,
+                    "offset": 1172
+                  }
+                },
+                "type": "text",
+                "value": " can come before this construct."
+              }
+            ],
+            "position": {
+              "end": {
+                "column": 58,
+                "line": 51,
+                "offset": 1204
+              },
+              "start": {
+                "column": 6,
+                "line": 51,
+                "offset": 1152
+              }
+            },
+            "type": "paragraph"
+          }
+        ],
+        "position": {
+          "end": {
+            "column": 58,
+            "line": 51,
+            "offset": 1204
+          },
+          "start": {
+            "column": 6,
+            "line": 51,
+            "offset": 1152
+          }
+        },
+        "type": "description"
+      },
+      {
+        "children": [
+          {
+            "name": "linkcode",
+            "position": {
+              "end": {
+                "column": 27,
+                "line": 53,
+                "offset": 1236
+              },
+              "start": {
+                "column": 11,
+                "line": 53,
+                "offset": 1220
+              }
+            },
+            "tag": "@linkcode",
+            "type": "inlineTag",
+            "value": "Code"
+          }
+        ],
+        "name": "see",
+        "position": {
+          "end": {
+            "column": 27,
+            "line": 53,
+            "offset": 1236
+          },
+          "start": {
+            "column": 6,
+            "line": 53,
+            "offset": 1215
+          }
+        },
+        "tag": "@see",
+        "type": "blockTag"
+      },
+      {
+        "children": [
+          {
+            "position": {
+              "end": {
+                "column": 29,
+                "line": 55,
+                "offset": 1270
+              },
+              "start": {
+                "column": 12,
+                "line": 55,
+                "offset": 1253
+              }
+            },
+            "type": "typeExpression",
+            "value": "TokenizeContext"
+          }
+        ],
+        "name": "this",
+        "position": {
+          "end": {
+            "column": 29,
+            "line": 55,
+            "offset": 1270
+          },
+          "start": {
+            "column": 6,
+            "line": 55,
+            "offset": 1247
+          }
+        },
+        "tag": "@this",
+        "type": "blockTag"
+      },
+      {
+        "children": [
+          {
+            "position": {
+              "end": {
+                "column": 19,
+                "line": 57,
+                "offset": 1294
+              },
+              "start": {
+                "column": 13,
+                "line": 57,
+                "offset": 1288
+              }
+            },
+            "type": "typeExpression",
+            "value": "Code"
+          },
+          {
+            "position": {
+              "end": {
+                "column": 50,
+                "line": 57,
+                "offset": 1325
+              },
+              "start": {
+                "column": 20,
+                "line": 57,
+                "offset": 1295
+              }
+            },
+            "type": "text",
+            "value": "code - Previous character code"
+          }
+        ],
+        "name": "param",
+        "position": {
+          "end": {
+            "column": 50,
+            "line": 57,
+            "offset": 1325
+          },
+          "start": {
+            "column": 6,
+            "line": 57,
+            "offset": 1281
+          }
+        },
+        "tag": "@param",
+        "type": "blockTag"
+      },
+      {
+        "children": [
+          {
+            "position": {
+              "end": {
+                "column": 23,
+                "line": 58,
+                "offset": 1348
+              },
+              "start": {
+                "column": 14,
+                "line": 58,
+                "offset": 1339
+              }
+            },
+            "type": "typeExpression",
+            "value": "boolean"
+          },
+          {
+            "position": {
+              "end": {
+                "column": 30,
+                "line": 58,
+                "offset": 1355
+              },
+              "start": {
+                "column": 24,
+                "line": 58,
+                "offset": 1349
+              }
+            },
+            "type": "inlineCode",
+            "value": "true"
+          },
+          {
+            "position": {
+              "end": {
+                "column": 34,
+                "line": 58,
+                "offset": 1359
+              },
+              "start": {
+                "column": 30,
+                "line": 58,
+                "offset": 1355
+              }
+            },
+            "type": "text",
+            "value": " if "
+          },
+          {
+            "position": {
+              "end": {
+                "column": 40,
+                "line": 58,
+                "offset": 1365
+              },
+              "start": {
+                "column": 34,
+                "line": 58,
+                "offset": 1359
+              }
+            },
+            "type": "inlineCode",
+            "value": "code"
+          },
+          {
+            "position": {
+              "end": {
+                "column": 65,
+                "line": 58,
+                "offset": 1390
+              },
+              "start": {
+                "column": 40,
+                "line": 58,
+                "offset": 1365
+              }
+            },
+            "type": "text",
+            "value": " allowed before construct"
+          }
+        ],
+        "name": "return",
+        "position": {
+          "end": {
+            "column": 65,
+            "line": 58,
+            "offset": 1390
+          },
+          "start": {
+            "column": 6,
+            "line": 58,
+            "offset": 1331
+          }
+        },
+        "tag": "@return",
+        "type": "blockTag"
+      }
+    ],
+    "code": null,
+    "kind": "docblock",
+    "position": {
+      "end": {
+        "column": 6,
+        "line": 59,
+        "offset": 1396
+      },
+      "start": {
+        "column": 3,
+        "line": 50,
+        "offset": 1143
+      }
+    },
+    "type": "comment"
+  }
+]

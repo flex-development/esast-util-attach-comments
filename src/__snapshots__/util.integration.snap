@@ -1,141 +1,505 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`integration:util > should attach comments 1`] = `
-Program
-  body:
-  ├─0 ImportDeclaration
-  │     specifiers:
-  │     └─0 ImportSpecifier
-  │           imported: Identifier<ok>
-  │           local: Identifier<assert>
-  │     source: Literal "devlop"
-  ├─1 ImportDeclaration
-  │     specifiers:
-  │     └─0 ImportSpecifier
-  │           imported: Identifier<asciiAlphanumeric>
-  │           local: Identifier<asciiAlphanumeric>
-  │     source: Literal "micromark-util-character"
-  ├─2 ImportDeclaration
-  │     specifiers:
-  │     └─0 ImportSpecifier
-  │           imported: Identifier<codes>
-  │           local: Identifier<codes>
-  │     source: Literal "micromark-util-symbol"
-  ├─3 FunctionDeclaration
-  │     id: Identifier<previous>
-  │     expression: false
-  │     generator: false
-  │     async: false
-  │     params:
-  │     └─0 Identifier<code>
-  │     body: BlockStatement
-  │       body:
-  │       └─0 ReturnStatement
-  │             argument: LogicalExpression
-  │               left: BinaryExpression
-  │                 left: Identifier<code>
-  │                 operator: "!=="
-  │                 right: MemberExpression
-  │                   object: Identifier<codes>
-  │                   property: Identifier<backslash>
-  │                   computed: false
-  │                   optional: false
-  │               operator: "&&"
-  │               right: BinaryExpression
-  │                 left: Identifier<code>
-  │                 operator: "!=="
-  │                 right: MemberExpression
-  │                   object: Identifier<codes>
-  │                   property: Identifier<colon>
-  │                   computed: false
-  │                   optional: false
-  │     comments:
-  │     ├─0 Block "*\\n * Construct a union of \`T\` and \`undefined\`.\\n *\\n * @template T\\n * @typedef {import('@flex-development/tutils').Optional<T>} Optional\\n "
-  │     │     leading: true
-  │     │     trailing: false
-  │     ├─1 Block "*\\n * @typedef {import('micromark-util-types').Code} Code\\n * @typedef {import('micromark-util-types').Construct} Construct\\n * @typedef {import('micromark-util-types').Effects} Effects\\n * @typedef {import('micromark-util-types').State} State\\n * @typedef {import('micromark-util-types').TokenizeContext} TokenizeContext\\n "
-  │     │     leading: true
-  │     │     trailing: false
-  │     └─2 Block "*\\n * Guard whether \`code\` can come before a gemoji.\\n *\\n * @see {@linkcode Code}\\n *\\n * @this {TokenizeContext}\\n *\\n * @param {Code} code - Previous character code\\n * @return {boolean} \`true\` if \`code\` allowed before construct\\n "
-  │           leading: true
-  │           trailing: false
-  │     leadingComments:
-  │     ├─0 Block "*\\n * Construct a union of \`T\` and \`undefined\`.\\n *\\n * @template T\\n * @typedef {import('@flex-development/tutils').Optional<T>} Optional\\n "
-  │     │     leading: true
-  │     │     trailing: false
-  │     ├─1 Block "*\\n * @typedef {import('micromark-util-types').Code} Code\\n * @typedef {import('micromark-util-types').Construct} Construct\\n * @typedef {import('micromark-util-types').Effects} Effects\\n * @typedef {import('micromark-util-types').State} State\\n * @typedef {import('micromark-util-types').TokenizeContext} TokenizeContext\\n "
-  │     │     leading: true
-  │     │     trailing: false
-  │     └─2 Block "*\\n * Guard whether \`code\` can come before a gemoji.\\n *\\n * @see {@linkcode Code}\\n *\\n * @this {TokenizeContext}\\n *\\n * @param {Code} code - Previous character code\\n * @return {boolean} \`true\` if \`code\` allowed before construct\\n "
-  │           leading: true
-  │           trailing: false
-  └─4 ExportDefaultDeclaration
-        declaration: ObjectExpression
-          properties:
-          ├─0 Property
-          │     method: false
-          │     shorthand: false
-          │     computed: false
-          │     key: Identifier<name>
-          │     kind: "init"
-          │     comments:
-          │     └─0 Block "*\\n   * Construct name.\\n   "
-          │           leading: true
-          │           trailing: false
-          │     leadingComments:
-          │     └─0 Block "*\\n   * Construct name.\\n   "
-          │           leading: true
-          │           trailing: false
-          ├─1 Property
-          │     method: false
-          │     shorthand: true
-          │     computed: false
-          │     key: Identifier<previous>
-          │     kind: "init"
-          │     comments:
-          │     └─0 Block "*\\n   * Guard whether \`code\` can come before this construct.\\n   *\\n   * @see {@linkcode Code}\\n   *\\n   * @this {TokenizeContext}\\n   *\\n   * @param {Code} code - Previous character code\\n   * @return {boolean} \`true\` if \`code\` allowed before construct\\n   "
-          │           leading: true
-          │           trailing: false
-          │     leadingComments:
-          │     └─0 Block "*\\n   * Guard whether \`code\` can come before this construct.\\n   *\\n   * @see {@linkcode Code}\\n   *\\n   * @this {TokenizeContext}\\n   *\\n   * @param {Code} code - Previous character code\\n   * @return {boolean} \`true\` if \`code\` allowed before construct\\n   "
-          │           leading: true
-          │           trailing: false
-          └─2 Property
-                method: true
-                shorthand: false
-                computed: false
-                key: Identifier<tokenize>
-                kind: "init"
-                comments:
-                └─0 Block "*\\n   * Set up a state machine to process character codes.\\n   *\\n   * @see {@linkcode Code}\\n   * @see {@linkcode Effects}\\n   * @see {@linkcode State}\\n   *\\n   * @this {TokenizeContext}\\n   *\\n   * @param {Effects} effects - Context object to transition state machine\\n   * @param {State} ok - Success state function\\n   * @param {State} nok - Error state function\\n   * @return {State} Initial state\\n   "
-                      leading: true
-                      trailing: false
-                leadingComments:
-                └─0 Block "*\\n   * Set up a state machine to process character codes.\\n   *\\n   * @see {@linkcode Code}\\n   * @see {@linkcode Effects}\\n   * @see {@linkcode State}\\n   *\\n   * @this {TokenizeContext}\\n   *\\n   * @param {Effects} effects - Context object to transition state machine\\n   * @param {State} ok - Success state function\\n   * @param {State} nok - Error state function\\n   * @return {State} Initial state\\n   "
-                      leading: true
-                      trailing: false
-        comments:
-        └─0 Block "*\\n * Gemoji (\`:+1:\`) construct.\\n *\\n * @type {Construct}\\n "
-              leading: true
-              trailing: false
-        leadingComments:
-        └─0 Block "*\\n * Gemoji (\`:+1:\`) construct.\\n *\\n * @type {Construct}\\n "
-              leading: true
-              trailing: false
-  sourceType: "module"
-  comments:
-  ├─0 Block "*\\n * @file Fixtures - gemojiShortcode\\n * @module fixtures/gemojiShortcode\\n "
-  │     leading: true
-  │     trailing: false
-  └─1 Line " # sourceMappingURL=gemoji-shortcode.mjs.map"
-        leading: false
-        trailing: true
-  leadingComments:
-  └─0 Block "*\\n * @file Fixtures - gemojiShortcode\\n * @module fixtures/gemojiShortcode\\n "
-        leading: true
-        trailing: false
-  trailingComments:
-  └─0 Line " # sourceMappingURL=gemoji-shortcode.mjs.map"
-        leading: false
-        trailing: true
+root[11] (1:1-138:1, 0-3472)
+│ mode: "module"
+├─0  comment[2] (1:1-4:4, 0-79)
+│    │ code: null
+│    │ kind: "docblock"
+│    ├─0 blockTag<file>[1] (2:4-2:36, 7-39)
+│    │   │ tag: "@file"
+│    │   └─0 text "Fixtures - gemojiShortcode" (2:10-2:36, 13-39)
+│    └─1 blockTag<module>[1] (3:4-3:36, 43-75)
+│        │ tag: "@module"
+│        └─0 text "fixtures/gemojiShortcode" (3:12-3:36, 51-75)
+├─1  importDeclaration[2] (6:1-6:38, 81-118)
+│    ├─0 importSpecifiers[1] (6:10-6:22, 90-102)
+│    │   └─0 importSpecifier[2] (6:10-6:22, 90-102)
+│    │       │ kind: "named"
+│    │       ├─0 identifier<ok> (6:10-6:12, 90-92)
+│    │       └─1 identifier<assert> (6:16-6:22, 96-102)
+│    └─1 string "devlop" (6:30-6:38, 110-118)
+├─2  importDeclaration[2] (7:1-7:61, 119-179)
+│    ├─0 importSpecifiers[1] (7:10-7:27, 128-145)
+│    │   └─0 importSpecifier[1] (7:10-7:27, 128-145)
+│    │       │ kind: "named"
+│    │       └─0 identifier<asciiAlphanumeric> (7:10-7:27, 128-145)
+│    └─1 string "micromark-util-character" (7:35-7:61, 153-179)
+├─3  importDeclaration[2] (8:1-8:46, 180-225)
+│    ├─0 importSpecifiers[1] (8:10-8:15, 189-194)
+│    │   └─0 importSpecifier[1] (8:10-8:15, 189-194)
+│    │       │ kind: "named"
+│    │       └─0 identifier<codes> (8:10-8:15, 189-194)
+│    └─1 string "micromark-util-symbol" (8:23-8:46, 202-225)
+├─4  comment[3] (10:1-15:4, 227-367)
+│    │ code: null
+│    │ kind: "docblock"
+│    ├─0 description[1] (11:4-11:45, 234-275)
+│    │   └─0 paragraph[5] (11:4-11:45, 234-275)
+│    │       ├─0 text "Construct a union of " (11:4-11:25, 234-255)
+│    │       ├─1 inlineCode "T" (11:25-11:28, 255-258)
+│    │       ├─2 text " and " (11:28-11:33, 258-263)
+│    │       ├─3 inlineCode "undefined" (11:33-11:44, 263-274)
+│    │       └─4 text "." (11:44-11:45, 274-275)
+│    ├─1 blockTag<template>[1] (13:4-13:15, 282-293)
+│    │   │ tag: "@template"
+│    │   └─0 text "T" (13:14-13:15, 292-293)
+│    └─2 blockTag<typedef>[2] (14:4-14:70, 297-363)
+│        │ tag: "@typedef"
+│        ├─0 typeExpression "import('@flex-development/tutils').Optional<T>" (14:13-14:61, 306-354)
+│        └─1 text "Optional" (14:49-14:57, 342-350)
+├─5  comment[5] (17:1-23:4, 369-691)
+│    │ code: null
+│    │ kind: "docblock"
+│    ├─0 blockTag<typedef>[2] (18:4-18:55, 376-427)
+│    │   │ tag: "@typedef"
+│    │   ├─0 typeExpression "import('micromark-util-types').Code" (18:13-18:50, 385-422)
+│    │   └─1 text "Code" (18:45-18:49, 417-421)
+│    ├─1 blockTag<typedef>[2] (19:4-19:65, 431-492)
+│    │   │ tag: "@typedef"
+│    │   ├─0 typeExpression "import('micromark-util-types').Construct" (19:13-19:55, 440-482)
+│    │   └─1 text "Construct" (19:45-19:54, 472-481)
+│    ├─2 blockTag<typedef>[2] (20:4-20:61, 496-553)
+│    │   │ tag: "@typedef"
+│    │   ├─0 typeExpression "import('micromark-util-types').Effects" (20:13-20:53, 505-545)
+│    │   └─1 text "Effects" (20:45-20:52, 537-544)
+│    ├─3 blockTag<typedef>[2] (21:4-21:57, 557-610)
+│    │   │ tag: "@typedef"
+│    │   ├─0 typeExpression "import('micromark-util-types').State" (21:13-21:51, 566-604)
+│    │   └─1 text "State" (21:45-21:50, 598-603)
+│    └─4 blockTag<typedef>[2] (22:4-22:77, 614-687)
+│        │ tag: "@typedef"
+│        ├─0 typeExpression "import('micromark-util-types').TokenizeContext" (22:13-22:61, 623-671)
+│        └─1 text "TokenizeContext" (22:45-22:60, 655-670)
+├─6  comment[5] (25:1-34:4, 693-922)
+│    │ code: null
+│    │ kind: "docblock"
+│    ├─0 description[1] (26:4-26:50, 700-746)
+│    │   └─0 paragraph[3] (26:4-26:50, 700-746)
+│    │       ├─0 text "Guard whether " (26:4-26:18, 700-714)
+│    │       ├─1 inlineCode "code" (26:18-26:24, 714-720)
+│    │       └─2 text " can come before a gemoji." (26:24-26:50, 720-746)
+│    ├─1 blockTag<see>[1] (28:4-28:25, 753-774)
+│    │   │ tag: "@see"
+│    │   └─0 inlineTag<linkcode> "Code" (28:9-28:25, 758-774)
+│    │         tag: "@linkcode"
+│    ├─2 blockTag<this>[1] (30:4-30:27, 781-804)
+│    │   │ tag: "@this"
+│    │   └─0 typeExpression "TokenizeContext" (30:10-30:27, 787-804)
+│    ├─3 blockTag<param>[2] (32:4-32:48, 811-855)
+│    │   │ tag: "@param"
+│    │   ├─0 typeExpression "Code" (32:11-32:17, 818-824)
+│    │   └─1 text "code - Previous character code" (32:18-32:48, 825-855)
+│    └─4 blockTag<return>[5] (33:4-33:63, 859-918)
+│        │ tag: "@return"
+│        ├─0 typeExpression "boolean" (33:12-33:21, 867-876)
+│        ├─1 inlineCode "true" (33:22-33:28, 877-883)
+│        ├─2 text " if " (33:28-33:32, 883-887)
+│        ├─3 inlineCode "code" (33:32-33:38, 887-893)
+│        └─4 text " allowed before construct" (33:38-33:63, 893-918)
+├─7  functionDeclaration[3] (35:1-37:2, 923-1008)
+│    │ data: {"async":false,"generator":false}
+│    ├─0 identifier<previous> (35:10-35:18, 932-940)
+│    ├─1 parameterList[1] (35:19-35:23, 941-945)
+│    │   └─0 identifier<code> (35:19-35:23, 941-945)
+│    └─2 blockStatement[1] (35:25-37:2, 947-1008)
+│        └─0 returnStatement[1] (36:3-36:58, 951-1006)
+│            └─0 logicalExpression[2] (36:10-36:58, 958-1006)
+│                │ operator: "&&"
+│                ├─0 binaryExpression[2] (36:10-36:34, 958-982)
+│                │   │ operator: "!=="
+│                │   ├─0 identifier<code> (36:10-36:14, 958-962)
+│                │   └─1 memberExpression[2] (36:19-36:34, 967-982)
+│                │       │ computed: false
+│                │       │ optional: false
+│                │       ├─0 identifier<codes> (36:19-36:24, 967-972)
+│                │       └─1 identifier<backslash> (36:25-36:34, 973-982)
+│                └─1 binaryExpression[2] (36:38-36:58, 986-1006)
+│                    │ operator: "!=="
+│                    ├─0 identifier<code> (36:38-36:42, 986-990)
+│                    └─1 memberExpression[2] (36:47-36:58, 995-1006)
+│                        │ computed: false
+│                        │ optional: false
+│                        ├─0 identifier<codes> (36:47-36:52, 995-1000)
+│                        └─1 identifier<colon> (36:53-36:58, 1001-1006)
+├─8  comment[2] (39:1-43:4, 1010-1071)
+│    │ code: null
+│    │ kind: "docblock"
+│    ├─0 description[1] (40:4-40:30, 1017-1043)
+│    │   └─0 paragraph[3] (40:4-40:30, 1017-1043)
+│    │       ├─0 text "Gemoji (" (40:4-40:12, 1017-1025)
+│    │       ├─1 inlineCode ":+1:" (40:12-40:18, 1025-1031)
+│    │       └─2 text ") construct." (40:18-40:30, 1031-1043)
+│    └─1 blockTag<type>[1] (42:4-42:21, 1050-1067)
+│        │ tag: "@type"
+│        └─0 typeExpression "Construct" (42:10-42:21, 1056-1067)
+├─9  exportDefaultDeclaration[1] (44:1-136:2, 1072-3425)
+│    └─0 objectExpression[6] (44:16-136:2, 1087-3425)
+│        ├─0 comment[1] (45:3-47:6, 1091-1121)
+│        │   │ code: null
+│        │   │ kind: "docblock"
+│        │   └─0 description[1] (46:6-46:21, 1100-1115)
+│        │       └─0 paragraph[1] (46:6-46:21, 1100-1115)
+│        │           └─0 text "Construct name." (46:6-46:21, 1100-1115)
+│        ├─1 property[2] (48:3-48:17, 1124-1138)
+│        │   │ computed: false
+│        │   │ data: {"assignment":true}
+│        │   │ kind: "init"
+│        │   │ method: false
+│        │   │ shorthand: false
+│        │   ├─0 identifier<name> (48:3-48:7, 1124-1128)
+│        │   └─1 string "gemoji" (48:9-48:17, 1130-1138)
+│        ├─2 comment[5] (50:3-59:6, 1143-1396)
+│        │   │ code: null
+│        │   │ kind: "docblock"
+│        │   ├─0 description[1] (51:6-51:58, 1152-1204)
+│        │   │   └─0 paragraph[3] (51:6-51:58, 1152-1204)
+│        │   │       ├─0 text "Guard whether " (51:6-51:20, 1152-1166)
+│        │   │       ├─1 inlineCode "code" (51:20-51:26, 1166-1172)
+│        │   │       └─2 text " can come before this construct." (51:26-51:58, 1172-1204)
+│        │   ├─1 blockTag<see>[1] (53:6-53:27, 1215-1236)
+│        │   │   │ tag: "@see"
+│        │   │   └─0 inlineTag<linkcode> "Code" (53:11-53:27, 1220-1236)
+│        │   │         tag: "@linkcode"
+│        │   ├─2 blockTag<this>[1] (55:6-55:29, 1247-1270)
+│        │   │   │ tag: "@this"
+│        │   │   └─0 typeExpression "TokenizeContext" (55:12-55:29, 1253-1270)
+│        │   ├─3 blockTag<param>[2] (57:6-57:50, 1281-1325)
+│        │   │   │ tag: "@param"
+│        │   │   ├─0 typeExpression "Code" (57:13-57:19, 1288-1294)
+│        │   │   └─1 text "code - Previous character code" (57:20-57:50, 1295-1325)
+│        │   └─4 blockTag<return>[5] (58:6-58:65, 1331-1390)
+│        │       │ tag: "@return"
+│        │       ├─0 typeExpression "boolean" (58:14-58:23, 1339-1348)
+│        │       ├─1 inlineCode "true" (58:24-58:30, 1349-1355)
+│        │       ├─2 text " if " (58:30-58:34, 1355-1359)
+│        │       ├─3 inlineCode "code" (58:34-58:40, 1359-1365)
+│        │       └─4 text " allowed before construct" (58:40-58:65, 1365-1390)
+│        ├─3 property[1] (60:3-60:11, 1399-1407)
+│        │   │ computed: false
+│        │   │ data: {"assignment":true}
+│        │   │ kind: "init"
+│        │   │ method: false
+│        │   │ shorthand: true
+│        │   └─0 identifier<previous> (60:3-60:11, 1399-1407)
+│        ├─4 comment[9] (62:3-75:6, 1412-1811)
+│        │   │ code: null
+│        │   │ kind: "docblock"
+│        │   ├─0 description[1] (63:6-63:56, 1421-1471)
+│        │   │   └─0 paragraph[1] (63:6-63:56, 1421-1471)
+│        │   │       └─0 text "Set up a state machine to process character codes." (63:6-63:56, 1421-1471)
+│        │   ├─1 blockTag<see>[1] (65:6-65:27, 1482-1503)
+│        │   │   │ tag: "@see"
+│        │   │   └─0 inlineTag<linkcode> "Code" (65:11-65:27, 1487-1503)
+│        │   │         tag: "@linkcode"
+│        │   ├─2 blockTag<see>[1] (66:6-66:30, 1509-1533)
+│        │   │   │ tag: "@see"
+│        │   │   └─0 inlineTag<linkcode> "Effects" (66:11-66:30, 1514-1533)
+│        │   │         tag: "@linkcode"
+│        │   ├─3 blockTag<see>[1] (67:6-67:28, 1539-1561)
+│        │   │   │ tag: "@see"
+│        │   │   └─0 inlineTag<linkcode> "State" (67:11-67:28, 1544-1561)
+│        │   │         tag: "@linkcode"
+│        │   ├─4 blockTag<this>[1] (69:6-69:29, 1572-1595)
+│        │   │   │ tag: "@this"
+│        │   │   └─0 typeExpression "TokenizeContext" (69:12-69:29, 1578-1595)
+│        │   ├─5 blockTag<param>[2] (71:6-71:75, 1606-1675)
+│        │   │   │ tag: "@param"
+│        │   │   ├─0 typeExpression "Effects" (71:13-71:22, 1613-1622)
+│        │   │   └─1 text "effects - Context object to transition state machine" (71:23-71:75, 1623-1675)
+│        │   ├─6 blockTag<param>[2] (72:6-72:48, 1681-1723)
+│        │   │   │ tag: "@param"
+│        │   │   ├─0 typeExpression "State" (72:13-72:20, 1688-1695)
+│        │   │   └─1 text "ok - Success state function" (72:21-72:48, 1696-1723)
+│        │   ├─7 blockTag<param>[2] (73:6-73:47, 1729-1770)
+│        │   │   │ tag: "@param"
+│        │   │   ├─0 typeExpression "State" (73:13-73:20, 1736-1743)
+│        │   │   └─1 text "nok - Error state function" (73:21-73:47, 1744-1770)
+│        │   └─8 blockTag<return>[2] (74:6-74:35, 1776-1805)
+│        │       │ tag: "@return"
+│        │       ├─0 typeExpression "State" (74:14-74:21, 1784-1791)
+│        │       └─1 text "Initial state" (74:22-74:35, 1792-1805)
+│        └─5 property[2] (76:3-135:4, 1814-3423)
+│            │ computed: false
+│            │ data: {"assignment":false}
+│            │ kind: "init"
+│            │ method: true
+│            │ shorthand: false
+│            ├─0 identifier<tokenize> (76:3-76:11, 1814-1822)
+│            └─1 functionExpression[3] (76:11-135:4, 1822-3423)
+│                │ data: {"async":false,"generator":false}
+│                ├─0 nothing
+│                ├─1 parameterList[3] (76:12-76:28, 1823-1839)
+│                │   ├─0 identifier<effects> (76:12-76:19, 1823-1830)
+│                │   ├─1 identifier<ok> (76:21-76:23, 1832-1834)
+│                │   └─2 identifier<nok> (76:25-76:28, 1836-1839)
+│                └─2 blockStatement[7] (76:30-135:4, 1841-3423)
+│                    ├─0 comment[3] (77:5-82:8, 1847-2033)
+│                    │   │ code: null
+│                    │   │ kind: "docblock"
+│                    │   ├─0 description[1] (78:8-78:70, 1858-1920)
+│                    │   │   └─0 paragraph[5] (78:8-78:70, 1858-1920)
+│                    │   │       ├─0 text "Process the inside (" (78:8-78:28, 1858-1878)
+│                    │   │       ├─1 inlineCode "+1" (78:28-78:32, 1878-1882)
+│                    │   │       ├─2 text ") and end (" (78:32-78:43, 1882-1893)
+│                    │   │       ├─3 inlineCode ":" (78:43-78:46, 1893-1896)
+│                    │   │       └─4 text ") of a gemoji shortcode." (78:46-78:70, 1896-1920)
+│                    │   ├─1 blockTag<param>[2] (80:8-80:54, 1935-1981)
+│                    │   │   │ tag: "@param"
+│                    │   │   ├─0 typeExpression "Code" (80:15-80:21, 1942-1948)
+│                    │   │   └─1 text "code - Character code to process" (80:22-80:54, 1949-1981)
+│                    │   └─2 blockTag<return>[2] (81:8-81:44, 1989-2025)
+│                    │       │ tag: "@return"
+│                    │       ├─0 typeExpression "Optional<State>" (81:16-81:33, 1997-2014)
+│                    │       └─1 text "Next state" (81:34-81:44, 2015-2025)
+│                    ├─1 functionDeclaration[3] (83:5-99:6, 2038-2533)
+│                    │   │ data: {"async":false,"generator":false}
+│                    │   ├─0 identifier<inside> (83:14-83:20, 2047-2053)
+│                    │   ├─1 parameterList[1] (83:21-83:25, 2054-2058)
+│                    │   │   └─0 identifier<code> (83:21-83:25, 2054-2058)
+│                    │   └─2 blockStatement[1] (83:27-99:6, 2060-2533)
+│                    │       └─0 switchStatement[10] (84:7-98:8, 2068-2527)
+│                    │           ├─0 boolean (84:15-84:19, 2076-2080)
+│                    │           ├─1 comment[1] (85:9-85:25)
+│                    │           │   │ kind: "block"
+│                    │           │   │ data: {"leading":true}
+│                    │           │   └─0 text "end gemoji" (85:12-85:22)
+│                    │           ├─2 switchCase[4] (85:26-88:20, 2109-2220)
+│                    │           │   ├─0 binaryExpression[2] (85:31-85:51, 2114-2134)
+│                    │           │   │   │ operator: "==="
+│                    │           │   │   ├─0 identifier<code> (85:31-85:35, 2114-2118)
+│                    │           │   │   └─1 memberExpression[2] (85:40-85:51, 2123-2134)
+│                    │           │   │       │ computed: false
+│                    │           │   │       │ optional: false
+│                    │           │   │       ├─0 identifier<codes> (85:40-85:45, 2123-2128)
+│                    │           │   │       └─1 identifier<colon> (85:46-85:51, 2129-2134)
+│                    │           │   ├─1 expressionStatement[1] (86:11-86:32, 2146-2167)
+│                    │           │   │   └─0 callExpression[2] (86:11-86:32, 2146-2167)
+│                    │           │   │       │ new: false
+│                    │           │   │       │ optional: false
+│                    │           │   │       ├─0 memberExpression[2] (86:11-86:26, 2146-2161)
+│                    │           │   │       │   │ computed: false
+│                    │           │   │       │   │ optional: false
+│                    │           │   │       │   ├─0 identifier<effects> (86:11-86:18, 2146-2153)
+│                    │           │   │       │   └─1 identifier<consume> (86:19-86:26, 2154-2161)
+│                    │           │   │       └─1 identifier<code> (86:27-86:31, 2162-2166)
+│                    │           │   ├─2 expressionStatement[1] (87:11-87:33, 2178-2200)
+│                    │           │   │   └─0 callExpression[2] (87:11-87:33, 2178-2200)
+│                    │           │   │       │ new: false
+│                    │           │   │       │ optional: false
+│                    │           │   │       ├─0 memberExpression[2] (87:11-87:23, 2178-2190)
+│                    │           │   │       │   │ computed: false
+│                    │           │   │       │   │ optional: false
+│                    │           │   │       │   ├─0 identifier<effects> (87:11-87:18, 2178-2185)
+│                    │           │   │       │   └─1 identifier<exit> (87:19-87:23, 2186-2190)
+│                    │           │   │       └─1 string "gemoji" (87:24-87:32, 2191-2199)
+│                    │           │   └─3 returnStatement[1] (88:11-88:20, 2211-2220)
+│                    │           │       └─0 identifier<ok> (88:18-88:20, 2218-2220)
+│                    │           ├─3 comment[1] (89:9-89:28)
+│                    │           │   │ kind: "block"
+│                    │           │   └─0 text "inside gemoji" (89:12-89:25)
+│                    │           ├─4 switchCase[1] (90:9-90:38, 2257-2286)
+│                    │           │   └─0 callExpression[2] (90:14-90:37, 2262-2285)
+│                    │           │       │ new: false
+│                    │           │       │ optional: false
+│                    │           │       ├─0 identifier<asciiAlphanumeric> (90:14-90:31, 2262-2279)
+│                    │           │       └─1 identifier<code> (90:32-90:36, 2280-2284)
+│                    │           ├─5 switchCase[1] (91:9-91:34, 2295-2320)
+│                    │           │   └─0 binaryExpression[2] (91:14-91:33, 2300-2319)
+│                    │           │       │ operator: "==="
+│                    │           │       ├─0 identifier<code> (91:14-91:18, 2300-2304)
+│                    │           │       └─1 memberExpression[2] (91:23-91:33, 2309-2319)
+│                    │           │           │ computed: false
+│                    │           │           │ optional: false
+│                    │           │           ├─0 identifier<codes> (91:23-91:28, 2309-2314)
+│                    │           │           └─1 identifier<dash> (91:29-91:33, 2315-2319)
+│                    │           ├─6 switchCase[1] (92:9-92:38, 2329-2358)
+│                    │           │   └─0 binaryExpression[2] (92:14-92:37, 2334-2357)
+│                    │           │       │ operator: "==="
+│                    │           │       ├─0 identifier<code> (92:14-92:18, 2334-2338)
+│                    │           │       └─1 memberExpression[2] (92:23-92:37, 2343-2357)
+│                    │           │           │ computed: false
+│                    │           │           │ optional: false
+│                    │           │           ├─0 identifier<codes> (92:23-92:28, 2343-2348)
+│                    │           │           └─1 identifier<plusSign> (92:29-92:37, 2349-2357)
+│                    │           ├─7 switchCase[3] (93:9-95:24, 2367-2454)
+│                    │           │   ├─0 binaryExpression[2] (93:14-93:39, 2372-2397)
+│                    │           │   │   │ operator: "==="
+│                    │           │   │   ├─0 identifier<code> (93:14-93:18, 2372-2376)
+│                    │           │   │   └─1 memberExpression[2] (93:23-93:39, 2381-2397)
+│                    │           │   │       │ computed: false
+│                    │           │   │       │ optional: false
+│                    │           │   │       ├─0 identifier<codes> (93:23-93:28, 2381-2386)
+│                    │           │   │       └─1 identifier<underscore> (93:29-93:39, 2387-2397)
+│                    │           │   ├─1 expressionStatement[1] (94:11-94:32, 2409-2430)
+│                    │           │   │   └─0 callExpression[2] (94:11-94:32, 2409-2430)
+│                    │           │   │       │ new: false
+│                    │           │   │       │ optional: false
+│                    │           │   │       ├─0 memberExpression[2] (94:11-94:26, 2409-2424)
+│                    │           │   │       │   │ computed: false
+│                    │           │   │       │   │ optional: false
+│                    │           │   │       │   ├─0 identifier<effects> (94:11-94:18, 2409-2416)
+│                    │           │   │       │   └─1 identifier<consume> (94:19-94:26, 2417-2424)
+│                    │           │   │       └─1 identifier<code> (94:27-94:31, 2425-2429)
+│                    │           │   └─2 returnStatement[1] (95:11-95:24, 2441-2454)
+│                    │           │       └─0 identifier<inside> (95:18-95:24, 2448-2454)
+│                    │           ├─8 switchCase[2] (96:9-97:27, 2463-2519)
+│                    │           │   ├─0 nothing
+│                    │           │   └─1 returnStatement[1] (97:11-97:27, 2503-2519)
+│                    │           │       └─0 callExpression[2] (97:18-97:27, 2510-2519)
+│                    │           │           │ new: false
+│                    │           │           │ optional: false
+│                    │           │           ├─0 identifier<nok> (97:18-97:21, 2510-2513)
+│                    │           │           └─1 identifier<code> (97:22-97:26, 2514-2518)
+│                    │           └─9 comment[1] (97:29-97:48)
+│                    │               │ kind: "block"
+│                    │               │ data: {"trailing":true}
+│                    │               └─0 text "invalid gemoji" (97:31-97:45)
+│                    ├─2 comment[3] (101:5-106:8, 2539-2699)
+│                    │   │ code: null
+│                    │   │ kind: "docblock"
+│                    │   ├─0 description[1] (102:8-102:44, 2550-2586)
+│                    │   │   └─0 paragraph[1] (102:8-102:44, 2550-2586)
+│                    │   │       └─0 text "Begin processing a gemoji shortcode." (102:8-102:44, 2550-2586)
+│                    │   ├─1 blockTag<param>[2] (104:8-104:54, 2601-2647)
+│                    │   │   │ tag: "@param"
+│                    │   │   ├─0 typeExpression "Code" (104:15-104:21, 2608-2614)
+│                    │   │   └─1 text "code - Character code to process" (104:22-104:54, 2615-2647)
+│                    │   └─2 blockTag<return>[2] (105:8-105:44, 2655-2691)
+│                    │       │ tag: "@return"
+│                    │       ├─0 typeExpression "Optional<State>" (105:16-105:33, 2663-2680)
+│                    │       └─1 text "Next state" (105:34-105:44, 2681-2691)
+│                    ├─3 functionDeclaration[3] (107:5-118:6, 2704-2995)
+│                    │   │ data: {"async":false,"generator":false}
+│                    │   ├─0 identifier<begin> (107:14-107:19, 2713-2718)
+│                    │   ├─1 parameterList[1] (107:20-107:24, 2719-2723)
+│                    │   │   └─0 identifier<code> (107:20-107:24, 2719-2723)
+│                    │   └─2 blockStatement[1] (107:26-118:6, 2725-2995)
+│                    │       └─0 switchStatement[6] (108:7-117:8, 2733-2989)
+│                    │           ├─0 identifier<code> (108:15-108:19, 2741-2745)
+│                    │           ├─1 comment[1] (109:9-109:47)
+│                    │           │   │ kind: "line"
+│                    │           │   └─0 text "ignore lone and back to back colons" (109:12-109:47)
+│                    │           ├─2 switchCase[1] (110:9-110:24, 2804-2819)
+│                    │           │   └─0 memberExpression[2] (110:14-110:23, 2809-2818)
+│                    │           │       │ computed: false
+│                    │           │       │ optional: false
+│                    │           │       ├─0 identifier<codes> (110:14-110:19, 2809-2814)
+│                    │           │       └─1 identifier<eof> (110:20-110:23, 2815-2818)
+│                    │           ├─3 switchCase[2] (111:9-112:27, 2828-2872)
+│                    │           │   ├─0 memberExpression[2] (111:14-111:25, 2833-2844)
+│                    │           │   │   │ computed: false
+│                    │           │   │   │ optional: false
+│                    │           │   │   ├─0 identifier<codes> (111:14-111:19, 2833-2838)
+│                    │           │   │   └─1 identifier<colon> (111:20-111:25, 2839-2844)
+│                    │           │   └─1 returnStatement[1] (112:11-112:27, 2856-2872)
+│                    │           │       └─0 callExpression[2] (112:18-112:27, 2863-2872)
+│                    │           │           │ new: false
+│                    │           │           │ optional: false
+│                    │           │           ├─0 identifier<nok> (112:18-112:21, 2863-2866)
+│                    │           │           └─1 identifier<code> (112:22-112:26, 2867-2871)
+│                    │           ├─4 comment[1] (113:9-113:36)
+│                    │           │   │ kind: "line"
+│                    │           │   └─0 text "entering possible gemoji" (113:12-113:36)
+│                    │           └─5 switchCase[3] (114:9-116:24, 2917-2981)
+│                    │               ├─0 nothing
+│                    │               ├─1 expressionStatement[1] (115:11-115:32, 2936-2957)
+│                    │               │   └─0 callExpression[2] (115:11-115:32, 2936-2957)
+│                    │               │       │ new: false
+│                    │               │       │ optional: false
+│                    │               │       ├─0 memberExpression[2] (115:11-115:26, 2936-2951)
+│                    │               │       │   │ computed: false
+│                    │               │       │   │ optional: false
+│                    │               │       │   ├─0 identifier<effects> (115:11-115:18, 2936-2943)
+│                    │               │       │   └─1 identifier<consume> (115:19-115:26, 2944-2951)
+│                    │               │       └─1 identifier<code> (115:27-115:31, 2952-2956)
+│                    │               └─2 returnStatement[1] (116:11-116:24, 2968-2981)
+│                    │                   └─0 identifier<inside> (116:18-116:24, 2975-2981)
+│                    ├─4 comment[3] (120:5-125:8, 3001-3161)
+│                    │   │ code: null
+│                    │   │ kind: "docblock"
+│                    │   ├─0 description[1] (121:8-121:54, 3012-3058)
+│                    │   │   └─0 paragraph[3] (121:8-121:54, 3012-3058)
+│                    │   │       ├─0 text "Process the start of a gemoji shortcode (" (121:8-121:49, 3012-3053)
+│                    │   │       ├─1 inlineCode ":" (121:49-121:52, 3053-3056)
+│                    │   │       └─2 text ")." (121:52-121:54, 3056-3058)
+│                    │   ├─1 blockTag<param>[2] (123:8-123:54, 3073-3119)
+│                    │   │   │ tag: "@param"
+│                    │   │   ├─0 typeExpression "Code" (123:15-123:21, 3080-3086)
+│                    │   │   └─1 text "code - Character code to process" (123:22-123:54, 3087-3119)
+│                    │   └─2 blockTag<return>[2] (124:8-124:34, 3127-3153)
+│                    │       │ tag: "@return"
+│                    │       ├─0 typeExpression "State" (124:16-124:23, 3135-3142)
+│                    │       └─1 text "Next state" (124:24-124:34, 3143-3153)
+│                    ├─5 variableDeclaration[1] (126:5-132:6, 3166-3401)
+│                    │   │ kind: "const"
+│                    │   └─0 variableDeclarator[2] (126:11-132:6, 3172-3401)
+│                    │       ├─0 identifier<start> (126:11-126:16, 3172-3177)
+│                    │       └─1 functionExpression[3] (126:19-132:6, 3180-3401)
+│                    │           │ data: {"arrow":true,"async":false,"generator":false}
+│                    │           ├─0 nothing
+│                    │           ├─1 parameterList[1] (126:19-126:23, 3180-3184)
+│                    │           │   └─0 identifier<code> (126:19-126:23, 3180-3184)
+│                    │           └─2 blockStatement[5] (126:27-132:6, 3188-3401)
+│                    │               ├─0 expressionStatement[1] (127:7-127:51, 3196-3240)
+│                    │               │   └─0 callExpression[3] (127:7-127:51, 3196-3240)
+│                    │               │       │ new: false
+│                    │               │       │ optional: false
+│                    │               │       ├─0 identifier<assert> (127:7-127:13, 3196-3202)
+│                    │               │       ├─1 binaryExpression[2] (127:14-127:34, 3203-3223)
+│                    │               │       │   │ operator: "==="
+│                    │               │       │   ├─0 identifier<code> (127:14-127:18, 3203-3207)
+│                    │               │       │   └─1 memberExpression[2] (127:23-127:34, 3212-3223)
+│                    │               │       │       │ computed: false
+│                    │               │       │       │ optional: false
+│                    │               │       │       ├─0 identifier<codes> (127:23-127:28, 3212-3217)
+│                    │               │       │       └─1 identifier<colon> (127:29-127:34, 3218-3223)
+│                    │               │       └─2 string "expected \`:\`" (127:36-127:50, 3225-3239)
+│                    │               ├─1 expressionStatement[1] (128:7-128:78, 3247-3318)
+│                    │               │   └─0 callExpression[3] (128:7-128:78, 3247-3318)
+│                    │               │       │ new: false
+│                    │               │       │ optional: false
+│                    │               │       ├─0 identifier<assert> (128:7-128:13, 3247-3253)
+│                    │               │       ├─1 callExpression[3] (128:14-128:48, 3254-3288)
+│                    │               │       │   │ new: false
+│                    │               │       │   │ optional: false
+│                    │               │       │   ├─0 memberExpression[2] (128:14-128:27, 3254-3267)
+│                    │               │       │   │   │ computed: false
+│                    │               │       │   │   │ optional: false
+│                    │               │       │   │   ├─0 identifier<previous> (128:14-128:22, 3254-3262)
+│                    │               │       │   │   └─1 identifier<call> (128:23-128:27, 3263-3267)
+│                    │               │       │   ├─1 this (128:28-128:32, 3268-3272)
+│                    │               │       │   └─2 memberExpression[2] (128:34-128:47, 3274-3287)
+│                    │               │       │       │ computed: false
+│                    │               │       │       │ optional: false
+│                    │               │       │       ├─0 this (128:34-128:38, 3274-3278)
+│                    │               │       │       └─1 identifier<previous> (128:39-128:47, 3279-3287)
+│                    │               │       └─2 string "expected correct previous" (128:50-128:77, 3290-3317)
+│                    │               ├─2 expressionStatement[1] (129:7-129:30, 3325-3348)
+│                    │               │   └─0 callExpression[2] (129:7-129:30, 3325-3348)
+│                    │               │       │ new: false
+│                    │               │       │ optional: false
+│                    │               │       ├─0 memberExpression[2] (129:7-129:20, 3325-3338)
+│                    │               │       │   │ computed: false
+│                    │               │       │   │ optional: false
+│                    │               │       │   ├─0 identifier<effects> (129:7-129:14, 3325-3332)
+│                    │               │       │   └─1 identifier<enter> (129:15-129:20, 3333-3338)
+│                    │               │       └─1 string "gemoji" (129:21-129:29, 3339-3347)
+│                    │               ├─3 expressionStatement[1] (130:7-130:28, 3355-3376)
+│                    │               │   └─0 callExpression[2] (130:7-130:28, 3355-3376)
+│                    │               │       │ new: false
+│                    │               │       │ optional: false
+│                    │               │       ├─0 memberExpression[2] (130:7-130:22, 3355-3370)
+│                    │               │       │   │ computed: false
+│                    │               │       │   │ optional: false
+│                    │               │       │   ├─0 identifier<effects> (130:7-130:14, 3355-3362)
+│                    │               │       │   └─1 identifier<consume> (130:15-130:22, 3363-3370)
+│                    │               │       └─1 identifier<code> (130:23-130:27, 3371-3375)
+│                    │               └─4 returnStatement[1] (131:7-131:19, 3383-3395)
+│                    │                   └─0 identifier<begin> (131:14-131:19, 3390-3395)
+│                    └─6 returnStatement[1] (134:5-134:17, 3407-3419)
+│                        └─0 identifier<start> (134:12-134:17, 3414-3419)
+└─10 comment[1] (137:1-137:46)
+     │ kind: "line"
+     └─0 text "# sourceMappingURL=gemoji-shortcode.mjs.map" (137:3-137:46)
 `;

@@ -3,36 +3,34 @@
  * @module esast-util-attach-comments/tests/integration/util
  */
 
-import { constant } from '@flex-development/tutils'
-import { fromJs } from 'esast-util-from-js'
-import type { Program } from 'estree'
-import { visit } from 'estree-util-visit'
-import { read } from 'to-vfile'
+import comments from '#fixtures/comments'
+import * as utils from '#src/utils'
+import type { Spy } from '#tests/interfaces'
+import type { Root } from '@flex-development/esast'
+import { clone, constant } from '@flex-development/tutils'
 import { inspectNoColor as inspect } from 'unist-util-inspect'
-import type { VFile } from 'vfile'
 import type { TestContext } from 'vitest'
 import testSubject from '../util'
 
 describe('integration:util', () => {
-  let file: VFile
-  let tree: Program
+  let slice: Spy<(typeof utils)['slice']>
+  let tree: Root
 
-  beforeAll(async () => {
-    file = await read('__fixtures__/gemoji-shortcode.mjs')
+  beforeEach(async () => {
+    slice = vi.spyOn(utils, 'slice').mockName('slice')
+    tree = clone((await import('#fixtures/tree')).default)
   })
 
   beforeEach((ctx: TestContext): void => {
     ctx.expect.addSnapshotSerializer({
-      print: (val: unknown): string => inspect(val, { showPositions: false }),
+      print: (val: unknown): string => inspect(val),
       test: constant(true)
     })
-
-    tree = fromJs(String(file), { module: true })
   })
 
   it('should attach comments', () => {
     // Act
-    testSubject(tree, tree.comments)
+    testSubject(tree, comments)
 
     // Expect
     expect(tree).toMatchSnapshot()
@@ -43,12 +41,6 @@ describe('integration:util', () => {
     testSubject(tree)
 
     // Expect
-    visit(tree, node => {
-      if (node.type !== 'Program') {
-        expect(node).not.to.have.property('comments')
-        expect(node).not.to.have.property('leadingComments')
-        expect(node).not.to.have.property('trailingComments')
-      }
-    })
+    expect(slice).not.toHaveBeenCalled()
   })
 })

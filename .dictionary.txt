@@ -4,7 +4,6 @@ cefc
 codecov
 commitlintrc
 dedupe
-dedupe
 deno
 dessant
 devlop
@@ -23,6 +22,7 @@ jchen
 kaisugi
 lcov
 lintstagedrc
+mdast
 mkbuild
 mlly
 nocheck

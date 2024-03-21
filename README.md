@@ -10,7 +10,7 @@
 [![vitest](https://img.shields.io/badge/-vitest-6e9f18?style=flat&logo=vitest&logoColor=ffffff)](https://vitest.dev/)
 [![yarn](https://img.shields.io/badge/-yarn-2c8ebb?style=flat&logo=yarn&logoColor=ffffff)](https://yarnpkg.com/)
 
-[esast][esast] (and [estree][estree]) utility to attach comments
+[esast][esast] utility to attach comments
 
 ## Contents
 
@@ -38,6 +38,7 @@ In Node.js (version 18+) with [yarn][yarn]:
 
 ```sh
 yarn add @flex-development/esast-util-attach-comments
+yarn add -D @flex-development/docast @flex-development/esast @types/mdast @types/unist
 ```
 
 <blockquote>
@@ -77,9 +78,8 @@ This package is fully typed with [TypeScript][typescript].
 
 See [`CONTRIBUTING.md`](CONTRIBUTING.md).
 
-[esast]: https://github.com/syntax-tree/esast
+[esast]: https://github.com/flex-development/esast
 [esm]: https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c
 [esmsh]: https://esm.sh/
-[estree]: https://github.com/estree/estree
 [typescript]: https://www.typescriptlang.org
 [yarn]: https://yarnpkg.com

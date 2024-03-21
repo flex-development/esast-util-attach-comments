@@ -34,7 +34,7 @@ const config = {
       parser: '@typescript-eslint/parser',
       parserOptions: {
         extraFileExtensions: [],
-        project: ['**/tsconfig.json'],
+        project: ['**/tsconfig.json', '**/tsconfig.*.json'],
         tsconfigRootDir: process.cwd(),
         warnOnUnsupportedTypeScriptVersion: true
       },
@@ -495,9 +495,16 @@ const config = {
             checkConstructors: true,
             checkGetters: true,
             checkSetters: true,
+            contexts: [
+              'TSDeclareFunction:not(TSDeclareFunction + TSDeclareFunction)',
+              'FunctionDeclaration:not(TSDeclareFunction + FunctionDeclaration)'
+            ],
             enableFixer: true,
             exemptEmptyConstructors: true,
-            exemptEmptyFunctions: false
+            exemptEmptyFunctions: false,
+            require: {
+              FunctionDeclaration: false
+            }
           }
         ],
         'jsdoc/require-param': [
@@ -619,13 +626,7 @@ const config = {
         'node/no-unpublished-require': 0,
         'node/no-unsupported-features/es-builtins': 2,
         'node/no-unsupported-features/es-syntax': 0,
-        'node/no-unsupported-features/node-builtins': [
-          2,
-          {
-            version: require('./package.json').engines?.node ??
-              '>=' + fs.readFileSync('.nvmrc', 'utf8')
-          }
-        ],
+        'node/no-unsupported-features/node-builtins': 2,
         'node/prefer-global/buffer': 2,
         'node/prefer-global/console': 2,
         'node/prefer-global/process': 2,
