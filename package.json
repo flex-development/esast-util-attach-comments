@@ -93,7 +93,7 @@
     "@flex-development/mlly": "1.0.0-alpha.18",
     "@flex-development/pathe": "2.0.0",
     "@flex-development/unist-util-types": "1.2.0",
-    "@html-eslint/eslint-plugin": "0.24.1",
+    "@html-eslint/eslint-plugin": "0.25.0",
     "@html-eslint/parser": "0.24.1",
     "@types/chai": "4.3.12",
     "@types/eslint": "8.56.5",
