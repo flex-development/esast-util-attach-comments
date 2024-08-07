@@ -94,7 +94,7 @@
     "@flex-development/pathe": "2.0.0",
     "@flex-development/unist-util-types": "1.2.0",
     "@html-eslint/eslint-plugin": "0.24.1",
-    "@html-eslint/parser": "0.24.1",
+    "@html-eslint/parser": "0.26.0",
     "@types/chai": "4.3.12",
     "@types/eslint": "8.56.5",
     "@types/is-ci": "3.0.4",
