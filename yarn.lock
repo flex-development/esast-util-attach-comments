@@ -1316,15 +1316,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@flex-development/docast@npm:1.0.0-alpha.14":
-  version: 1.0.0-alpha.14
-  resolution: "@flex-development/docast@npm:1.0.0-alpha.14::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40flex-development%2Fdocast%2F1.0.0-alpha.14%2F3c67a24fc29455b681ef09f9541250c5b2cdff84"
+"@flex-development/docast@npm:1.0.0-alpha.18":
+  version: 1.0.0-alpha.18
+  resolution: "@flex-development/docast@npm:1.0.0-alpha.18::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40flex-development%2Fdocast%2F1.0.0-alpha.18%2F988bafe7aa53fe2e01e30a73ff25f834d66247ef"
   dependencies:
-    "@flex-development/tutils": "npm:6.0.0-alpha.25"
-  peerDependencies:
-    "@types/mdast": ">=4.0.3"
-    "@types/unist": ">=3.0.2"
-  checksum: 10/4ed9a791cb4e6a5a456ec6d287b77d4def25db6e0060d4d22a9ea2e53b88864a5244778de53f671c80130032f26896ef0ab63f7cf6924e110a251db2c2508a23
+    "@flex-development/unist-util-types": "npm:1.6.1"
+    "@types/mdast": "npm:4.0.4"
+    "@types/unist": "npm:3.0.2"
+  checksum: 10/d6220032308d0143b4e43b50ee66a48c7f193561dfdf28eabae78d51413fddbb4ff21e9c9762f1372c78d8fb2ebbed049b1479a559b1479ca01dbcac8f08966c
   languageName: node
   linkType: hard
 
@@ -1373,7 +1372,7 @@ __metadata:
     "@commitlint/types": "npm:19.0.3"
     "@flex-development/commitlint-config": "npm:1.0.1"
     "@flex-development/decorator-regex": "npm:2.0.0"
-    "@flex-development/docast": "npm:1.0.0-alpha.14"
+    "@flex-development/docast": "npm:1.0.0-alpha.18"
     "@flex-development/docast-util-from-docs": "npm:1.0.0-alpha.1"
     "@flex-development/esast": "npm:1.0.0-alpha.5"
     "@flex-development/esm-types": "npm:2.0.0"
@@ -1382,8 +1381,8 @@ __metadata:
     "@flex-development/mlly": "npm:1.0.0-alpha.18"
     "@flex-development/pathe": "npm:2.0.0"
     "@flex-development/tutils": "npm:6.0.0-alpha.25"
-    "@flex-development/unist-util-types": "npm:1.2.0"
-    "@flex-development/unist-util-visit": "npm:1.0.0"
+    "@flex-development/unist-util-types": "npm:1.6.1"
+    "@flex-development/unist-util-visit": "npm:1.1.0"
     "@html-eslint/eslint-plugin": "npm:0.26.0"
     "@html-eslint/parser": "npm:0.26.0"
     "@types/chai": "npm:4.3.12"
@@ -1806,25 +1805,34 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@flex-development/unist-util-types@npm:1.2.0":
-  version: 1.2.0
-  resolution: "@flex-development/unist-util-types@npm:1.2.0::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40flex-development%2Funist-util-types%2F1.2.0%2Fe73575356fb70910ec1467d05a02825d69997f22"
+"@flex-development/unist-util-types@npm:1.3.1":
+  version: 1.3.1
+  resolution: "@flex-development/unist-util-types@npm:1.3.1::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40flex-development%2Funist-util-types%2F1.3.1%2F44deb809fdc2921405035513bd54c4605213c7bc"
   peerDependencies:
     "@types/unist": ">=3.0.2"
-  checksum: 10/01f73462d6bbdb16a67aca5c77e2421fb260acc671d01628d3d1aa0debf044e226d468c033601c3bfb5cff6c47f030690d87e4e84c55ff1dcad513a4419cde0c
+  checksum: 10/110ec112363147784c6f4a32473a1a44a76d28b775fe3d37bbe46b09e7c9f1f67dd0c8d7b9ec5bbe5b8f4d915cbbb826e3b1efc70c0cb5ca020c34b72351c4c5
   languageName: node
   linkType: hard
 
-"@flex-development/unist-util-visit@npm:1.0.0":
-  version: 1.0.0
-  resolution: "@flex-development/unist-util-visit@npm:1.0.0::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40flex-development%2Funist-util-visit%2F1.0.0%2F80616055072ebb771682ec055244857a9789d677"
+"@flex-development/unist-util-types@npm:1.6.1":
+  version: 1.6.1
+  resolution: "@flex-development/unist-util-types@npm:1.6.1::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40flex-development%2Funist-util-types%2F1.6.1%2F0deabf0a30d32dc9ae23aea394ef67b8f0b806b9"
+  dependencies:
+    "@types/unist": "npm:3.0.2"
+  checksum: 10/fd308bb9673987b588d54afc56821fefaad9233fecf8d76f352a055c339716979f3c2e1b2d145628ffa0d9ac033fbe28d942294a029d98b52334dd9703471f99
+  languageName: node
+  linkType: hard
+
+"@flex-development/unist-util-visit@npm:1.1.0":
+  version: 1.1.0
+  resolution: "@flex-development/unist-util-visit@npm:1.1.0::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40flex-development%2Funist-util-visit%2F1.1.0%2Fb565477b68a3adb5b2ce14da1e013d30e52cfe15"
   dependencies:
     "@flex-development/tutils": "npm:6.0.0-alpha.25"
-    "@flex-development/unist-util-types": "npm:1.2.0"
+    "@flex-development/unist-util-types": "npm:1.3.1"
     unist-util-is: "npm:6.0.0"
   peerDependencies:
     "@types/unist": ">=3.0.2"
-  checksum: 10/c2fb4e2d26dc770b77298b412c22e5aeb6f673b7ec7c1093dd1994f4134c8fb0d04e57116b12a23b2758dafa890cb1efe3394870c0376fd9561e6da13ab090ba
+  checksum: 10/faa5501fb0649043ee9dfad9874d200647973b49da1f0a76a62cd4d92ca7a7410ac0d1c078fa06a6768b9686949c32d3f86ba9d416d0a84440e13979f8e30397
   languageName: node
   linkType: hard
 
@@ -2412,6 +2420,15 @@ __metadata:
   dependencies:
     "@types/unist": "npm:*"
   checksum: 10/6d2d8f00ffaff6663dd67ea9ab999a5e52066c001432a9b99947fa9e76bccba819dfca40e419588a637a70d42cd405071f5b76efd4ddeb1dc721353b7cc73623
+  languageName: node
+  linkType: hard
+
+"@types/mdast@npm:4.0.4":
+  version: 4.0.4
+  resolution: "@types/mdast@npm:4.0.4"
+  dependencies:
+    "@types/unist": "npm:*"
+  checksum: 10/efe3ec11b9ee0015a396c4fb4cd1b6f31b51b8ae9783c59560e6fc0bf6c2fa1dcc7fccaf45fa09a6c8b3397fab9dc8d431433935cae3835caa70a18f7fc775f8
   languageName: node
   linkType: hard
 
