@@ -105,7 +105,7 @@
     "@typescript-eslint/eslint-plugin": "7.13.1",
     "@typescript-eslint/parser": "8.15.0",
     "@vates/toggle-scripts": "1.0.0",
-    "@vitest/coverage-v8": "1.6.0",
+    "@vitest/coverage-v8": "2.1.7",
     "chai": "5.1.1",
     "chai-each": "0.0.1",
     "cross-env": "7.0.3",
@@ -151,7 +151,7 @@
     "unist-util-inspect": "8.0.0",
     "vfile": "6.0.1",
     "vite-tsconfig-paths": "4.3.2",
-    "vitest": "1.6.0",
+    "vitest": "2.1.7",
     "yaml-eslint-parser": "1.2.3"
   },
   "peerDependencies": {
